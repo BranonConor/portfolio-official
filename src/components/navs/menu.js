@@ -8,7 +8,7 @@ import React from "react"
 import UserIcon from '../icons/user'
 
 const Menu  = () => (
-  <nav class='Menu'>
+  <nav className='Menu'>
     <Link to='/' activeStyle={{background: 'var(--grey-bg)', boxShadow: 'inset var(--nav-shadow)'}}><HomeIcon /></Link>
     <Link to='/about' activeStyle={{background: 'var(--grey-bg)', boxShadow: 'inset var(--nav-shadow)'}}><UserIcon /></Link>
     <Link to='/projects' activeStyle={{background: 'var(--grey-bg)', boxShadow: 'inset var(--nav-shadow)'}}><ProjectsIcon /></Link>

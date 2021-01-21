@@ -1,0 +1,17 @@
+.ProjectGrid {
+    margin: 64px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .ProjectGrid {
+        margin: 0 0;
+    }
+    .ProjectGrid .ProjectCard {
+        width: 100%;
+        margin: 16px 0;
+    }
+}
