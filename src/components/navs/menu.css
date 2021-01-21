@@ -31,35 +31,4 @@
     border-radius: 100%;
     opacity: 0;
 } */
-.Menu a .icon {
-    transition: 0.1s ease all;
-}
-.Menu a:hover .icon{
-    animation: bounce 0.25s linear 1;
-    animation-fill-mode: forwards;
-}
-/* .Menu a:hover::before {
-    opacity: 1;
-    transform: scale(50);
-} */
-.Menu a:hover {
-    box-shadow: inset var(--nav-shadow);
-}
 
-@keyframes bounce {
-    0% {
-        height: 24px;
-    }
-    25% {
-        height: 40px;
-    }
-    50% {
-        height: 30px;
-    }
-    75% {
-        height: 38px;
-    }
-    100% {
-        height: 35px;
-    }
-}

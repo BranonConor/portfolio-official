@@ -1,0 +1,47 @@
+.ProjectCard {
+    background: var(--dark-bg);
+    width: 320px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: var(--nav-shadow);
+    margin: 16px 16px 16px 0;
+}
+.ProjectCard .card-content {
+    box-sizing: border-box;
+    padding: 16px;
+    height: auto;
+}
+.ProjectCard .technologies {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    height: auto;
+}
+.ProjectCard .technologies li {
+    width: auto;
+    padding: 4px 8px;
+    background: var(--secondary-accent);
+    border-radius: 10px;
+    margin: 4px;
+}
+.ProjectCard .links {
+    box-sizing: border-box;
+    width: 100%;
+    background: var(--grey-bg);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    height: 50px;
+}
+.ProjectCard .links a {
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

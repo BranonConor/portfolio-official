@@ -1,15 +1,40 @@
+import "aos/dist/aos.css";
+
+import React, {useEffect} from "react"
+
+import AOS from "aos";
 import Layout from "../components/layout"
-import React from "react"
+import ProjectGrid from "../components/grids/project-grid";
 import SEO from "../components/seo"
 
-const ProjectsPage = () => (
-  <Layout>
-    <SEO title="Projects" />
-    <section className='page ProjectsPage'>
-      <h1>Projects</h1>
-      <p>Here's some work that I'm proud of.</p>
-    </section>
-  </Layout>
-)
+const ProjectsPage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
+
+  return (
+    <Layout>
+      <SEO title="Projects" />
+      <section className='page ProjectsPage'>
+        <div className="two-column">
+          <div className="content">
+            <div className="left">
+              <h1 data-aos='fade-right' data-aos-duration='300'>Projects</h1>
+              <p data-aos='fade-right' data-aos-duration='500'>
+                Here are some recent projects I'm proud of.
+              </p>
+              <hr data-aos='fade-right' data-aos-duration='900' />
+            </div>
+            <div className="right">
+              
+            </div>
+          </div>
+        </div>
+        <ProjectGrid />
+      </section>
+    </Layout>
+  )
+}
 
 export default ProjectsPage
