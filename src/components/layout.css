@@ -293,7 +293,7 @@ a.disabled-link:hover .icon {
 }
 @media only screen and (max-width: 600px) {
   .page {
-    padding: 128px 16px;
+    padding: 98px 16px;
   }
   .two-column {
     align-items: flex-start;

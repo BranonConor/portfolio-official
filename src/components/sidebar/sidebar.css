@@ -28,10 +28,11 @@
         height: 75px;
         top:0;
         background: none;
-        overflow: initial;
+        overflow: visible;
     }
     .Sidebar .logo {
         width: 300px;
+        height: 60px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
