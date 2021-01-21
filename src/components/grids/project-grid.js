@@ -102,11 +102,12 @@ const ProjectGrid = () => {
         {
             name: 'TheraMind Centers',
             role: 'Web developer consultant',
-            description: 'I worked with a UX Designer to create a series of new, beautiful websites with intuitive CMS solutions for TheraMind clinics in California.',
+            description: 'I worked with a UX Designer as the technical lead to create a series of new, beautiful websites with intuitive CMS solutions for TheraMind clinics in California.',
             technologies: [
                 'HTML',
                 'CSS',
                 'JS',
+                'HexoJS',
                 'Wordpress',
                 'Kinsta'
             ],

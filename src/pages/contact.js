@@ -20,7 +20,7 @@ const ContactPage = () => {
           <div className="content">
             <div className="left">
               <h1 data-aos='fade-right' data-aos-duration='300'>Contact Me</h1>
-              <p data-aos='fade-right' data-aos-duration='500'>I'd love to hear from you!</p>
+              <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>I'd love to hear from you!</h4>
               <p data-aos='fade-right' data-aos-duration='700'>
                 With a degree in behavioral neuroscience, a creative eye for stunning and ergonomic UX/UI design,
                 and a powerful command of modern technologies to build quality interfaces and experiences, my strengths
