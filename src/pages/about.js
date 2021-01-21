@@ -20,8 +20,7 @@ const AboutPage = () => {
           <div className="content">
             <div className="left">
               <h1 data-aos='fade-right' data-aos-duration='300'>About Me</h1>
-              <p data-aos='fade-right' data-aos-duration='500'>Welcome to my portfolio!</p>
-              <p data-aos='fade-right' data-aos-duration='700'>I'm a software developer and UX designer.</p>
+              <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>I'm a software engineer and UX designer.</h4>
               <p data-aos='fade-right' data-aos-duration='900'>
                 With a degree in behavioral neuroscience, a creative eye for stunning and ergonomic UX/UI design,
                 and a powerful command of modern technologies to build quality interfaces and experiences, my strengths

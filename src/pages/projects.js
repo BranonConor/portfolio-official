@@ -21,10 +21,9 @@ const ProjectsPage = () => {
           <div className="content">
             <div className="left">
               <h1 data-aos='fade-right' data-aos-duration='300'>Projects</h1>
-              <p data-aos='fade-right' data-aos-duration='500'>
+              <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>
                 Here are some recent projects I'm proud of.
-              </p>
-              <hr data-aos='fade-right' data-aos-duration='900' />
+              </h4>
             </div>
             <div className="right">
               

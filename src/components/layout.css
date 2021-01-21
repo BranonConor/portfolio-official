@@ -2,6 +2,7 @@
 :root {
   --primary-accent: #FF0096;
   --secondary-accent: #0080C7;
+  --blue-text: #189ee6;
   --dark-bg: #111111;
   --purple-bg: #22031F;
   --grey-bg: #222222;
@@ -130,6 +131,33 @@ hr {
   font-family: 'Comfortaa', sans-serif;
   font-size: 0.8em;
   color: var(--detail-grey);
+}
+.subtitle {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: bold;
+  width: auto;
+  color: var(--primary-accent);
+  border-left: 2px solid var(--primary-accent);
+  padding: 0px 0px 0px 16px;
+  margin: 0px 0px 8px 0;
+}
+.subtitle-blue {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: bold;
+  width: auto;
+  color: var(--blue-text);
+  border-left: 2px solid var(--blue-text);
+  padding: 0px 0px 0px 16px;
+  margin: 0px 0px 8px 0;
+}
+.subtitle-white {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: bold;
+  width: auto;
+  color: white;
+  border-left: 2px solid white;
+  padding: 0px 0px 0px 16px;
+  margin: 0px 0px 8px 0;
 }
 .button-text {
   font-weight: 600;
