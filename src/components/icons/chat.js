@@ -2,7 +2,7 @@ import React from 'react'
 
 const ChatIcon = () => {
     return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='icon'>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='icon'>
             <path d="M9 9H7V11H9V9Z" fill="white"/>
             <path d="M11 9H13V11H11V9Z" fill="white"/>
             <path d="M17 9H15V11H17V9Z" fill="white"/>

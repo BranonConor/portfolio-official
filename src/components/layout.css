@@ -6,7 +6,7 @@
   --grey-bg: #222222;
   --primary-gradient: linear-gradient(124.41deg, #0072B1 0%, #FD36AB 95.2%);
   --standard-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
-  --nav-shadow: 0px 7px 15px 0px rgba(0,0,0,0.2);
+  --nav-shadow: 0px 4px 15px 0px rgba(196, 130, 235, 0.3);
 }
 html {
   width: 100vw;
@@ -141,7 +141,7 @@ hr {
 .icon {
   margin: 0 0 0 0;
   transition: 0.3s ease all;
-  height: 44px;
+  height: 24px;
 }
 .page {
   box-sizing: border-box;

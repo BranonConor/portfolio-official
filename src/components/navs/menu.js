@@ -9,10 +9,10 @@ import UserIcon from '../icons/user'
 
 const Menu  = () => (
   <nav class='Menu'>
-    <Link to='/'><HomeIcon /></Link>
-    <Link to='/about'><UserIcon /></Link>
-    <Link to='/projects'><ProjectsIcon /></Link>
-    <Link to='/contact'><ChatIcon /></Link>
+    <Link to='/' activeStyle={{background: 'var(--grey-bg)', boxShadow: 'inset var(--nav-shadow)'}}><HomeIcon /></Link>
+    <Link to='/about' activeStyle={{background: 'var(--grey-bg)', boxShadow: 'inset var(--nav-shadow)'}}><UserIcon /></Link>
+    <Link to='/projects' activeStyle={{background: 'var(--grey-bg)', boxShadow: 'inset var(--nav-shadow)'}}><ProjectsIcon /></Link>
+    <Link to='/contact' activeStyle={{background: 'var(--grey-bg)', boxShadow: 'inset var(--nav-shadow)'}}><ChatIcon /></Link>
   </nav>
 )
 export default Menu
