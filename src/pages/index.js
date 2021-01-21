@@ -6,6 +6,7 @@ import React, {useEffect} from "react"
 import AOS from "aos";
 import ButtonPrimary from '../components/buttons/button-primary'
 import Layout from "../components/layout"
+import Resume from '../images/resume.pdf'
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -31,8 +32,9 @@ const IndexPage = () => {
                 lie at the intersection of technology and people.
               </p>
               <p className='subtitle-white' data-aos='fade-right' data-aos-duration='900'>My passion is building intuitive, efficient software that delights users and propels businesses forward.</p>
-              <div data-aos='fade-right' data-aos-duration='1100'>
+              <div data-aos='fade-right' data-aos-duration='1100' className='my-work'>
                 <ButtonPrimary link='/projects' content='See my work' />
+                <ButtonPrimary link={Resume} content='Download my resume' />
               </div>
             </div>
             <div className="right">
