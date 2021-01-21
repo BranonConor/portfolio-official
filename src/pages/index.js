@@ -17,10 +17,12 @@ const IndexPage = () => {
       <SEO title="Home" />
       <section className='page IndexPage'>
         <div className="two-column">
+          <div className="title">
+            <h1 data-aos='fade-right' data-aos-duration='300'>Hi, I'm Branon 👋🏼</h1>
+            <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>I'm a software engineer and UX designer.</h4>
+          </div>
           <div className="content">
             <div className="left">
-              <h1 data-aos='fade-right' data-aos-duration='300'>Hi, I'm Branon 👋🏼</h1>
-              <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>I'm a software engineer and UX designer.</h4>
               <p className='subtitle-white' data-aos='fade-right' data-aos-duration='700'>
                 With a degree in behavioral neuroscience, a creative eye for stunning and ergonomic UX/UI design,
                 and a powerful command of modern technologies to build quality interfaces and experiences, my strengths

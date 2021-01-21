@@ -1,0 +1,127 @@
+form {
+    padding: 32px 0;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+form label {
+    color: var(--detail-grey);
+    font-size: 0rem;
+}
+.name, .info, .submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.message, .message label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.name .first, .name .last {
+    width: 48%;
+}
+.info .email, .info .phone {
+    width: 48%;
+}
+input, textarea {
+    margin: 8px 0 8px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: var(--dark-bg);
+    color: var(--light-clinic-blue);
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    padding: 0 0 0 0;
+    box-shadow: var(--nav-shadow);
+    transition: 0.3s ease all;
+}
+input {
+    width: 100%;
+    height: 50px;
+    padding: 16px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+}
+input::placeholder, textarea::placeholder {
+    font-family: 'Nunito', sans-serif;
+    color: var(--detail-grey);
+    font-size: 14px;
+    font-weight: normal;
+}
+input:focus, textarea:focus {
+    background: var(--purple-bg);
+    box-shadow: none;
+    transform: translateY(4px);
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 16px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+}
+form .btn-primary {
+    outline: none;
+    border: none;
+    color: white;
+    /* Rose */
+    background: var(--primary-gradient);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 30px;
+    margin: 8px 16px 0 0;
+    width: 150px;
+    height: 45px;
+    transition: 0.4s ease all;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.25px;
+}
+form .btn-primary:hover {
+    box-shadow: none;
+    transform: translateY(2px);
+    cursor: pointer;
+    color: white;
+}
+form .btn-primary::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-accent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    transition: 0.4s ease all;
+    opacity: 0;
+}
+form .btn-primary:hover::before {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+    form .name, form .info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .name .first, .name .last, .info .email, .info .phone {
+        width: 100%;
+    }
+    .name input, .info input {
+        margin: 8px 0;
+    }
+
+}

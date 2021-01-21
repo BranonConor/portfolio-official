@@ -18,16 +18,11 @@ const ProjectsPage = () => {
       <SEO title="Projects" />
       <section className='page ProjectsPage'>
         <div className="two-column">
-          <div className="content">
-            <div className="left">
-              <h1 data-aos='fade-right' data-aos-duration='300'>Projects</h1>
-              <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>
-                Here are some recent projects I'm proud of.
-              </h4>
-            </div>
-            <div className="right">
-              
-            </div>
+          <div className="title">
+            <h1 data-aos='fade-right' data-aos-duration='300'>Projects</h1>
+            <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>
+              Here are some recent projects I'm proud of.
+            </h4>
           </div>
         </div>
         <ProjectGrid />
