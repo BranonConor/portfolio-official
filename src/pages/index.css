@@ -1,3 +1,8 @@
 .IndexPage .ButtonPrimary {
-    margin: 32px 0;
+    margin: 32px 16px 0 0;
+}
+.IndexPage .my-work {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
