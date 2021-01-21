@@ -1,0 +1,12 @@
+.Footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 16px;
+    background: var(--purple-bg);
+    z-index: 9;
+}

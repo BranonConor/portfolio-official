@@ -1,0 +1,21 @@
+.Sidebar {
+    width: 75px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--dark-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.Sidebar .logo {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    background: var(--purple-bg);
+}
