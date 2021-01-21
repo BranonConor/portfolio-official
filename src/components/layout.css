@@ -139,7 +139,7 @@ hr {
   color: var(--primary-accent);
   border-left: 2px solid var(--primary-accent);
   padding: 0px 0px 0px 16px;
-  margin: 0px 0px 8px 0;
+  margin: 8px 0px 4px 0;
 }
 .subtitle-blue {
   font-family: 'Comfortaa', sans-serif;
@@ -148,7 +148,7 @@ hr {
   color: var(--blue-text);
   border-left: 2px solid var(--blue-text);
   padding: 0px 0px 0px 16px;
-  margin: 0px 0px 8px 0;
+  margin: 8px 0px 4px 0;
 }
 .subtitle-white {
   font-family: 'Comfortaa', sans-serif;
@@ -157,7 +157,7 @@ hr {
   color: white;
   border-left: 2px solid white;
   padding: 0px 0px 0px 16px;
-  margin: 0px 0px 8px 0;
+  margin: 8px 0px 4px 0;
 }
 .button-text {
   font-weight: 600;
@@ -261,6 +261,7 @@ a.disabled-link:hover .icon {
   text-align: left;
 }
 .two-column .content .left {
+  padding: 16px 16px 16px 0;
   box-sizing: border-box;
   width: 600px;
   height: 100%;
