@@ -147,3 +147,10 @@ hr {
   box-sizing: border-box;
   padding: 64px 128px;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .page {
+    padding: 128px 16px;
+  }
+}
