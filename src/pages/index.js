@@ -1,8 +1,10 @@
 import "aos/dist/aos.css";
+import './index.css'
 
 import React, {useEffect} from "react"
 
 import AOS from "aos";
+import ButtonPrimary from '../components/buttons/button-primary'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -29,6 +31,9 @@ const IndexPage = () => {
                 lie at the intersection of technology and people.
               </p>
               <p className='subtitle-white' data-aos='fade-right' data-aos-duration='900'>My passion is building intuitive, efficient software that delights users and propels businesses forward.</p>
+              <div data-aos='fade-right' data-aos-duration='1100'>
+                <ButtonPrimary link='/projects' content='See my work' />
+              </div>
             </div>
             <div className="right">
 
