@@ -9,6 +9,7 @@ import Layout from "../components/layout"
 import Resume from '../images/resume.pdf'
 import SEO from "../components/seo"
 import TechGrid from '../components/grids/tech-grid'
+import {motion} from 'framer-motion'
 
 const IndexPage = () => {
   useEffect(() => {
@@ -22,21 +23,47 @@ const IndexPage = () => {
       <section className='page IndexPage'>
         <div className="two-column">
           <div className="title">
-            <h1 data-aos='fade-right' data-aos-duration='300'>Hi, I'm Branon 👋🏼</h1>
-            <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>I'm a software engineer and UX designer.</h4>
+            <motion.h1
+              initial={{x: -75}}
+              animate={{x: 0}}
+              transition={{type: 'spring', duration: 0.5}}
+            >
+              Hi, I'm Branon<span>👋🏼</span>
+            </motion.h1>
+            <motion.h4 className='subtitle'
+              initial={{x: -75}}
+              animate={{x: 0}}
+              transition={{type: 'spring', duration: 0.7}}
+            >
+              I'm a software engineer and UX designer.
+            </motion.h4>
           </div>
           <div className="content">
             <div className="left">
-              <p className='subtitle-white' data-aos='fade-right' data-aos-duration='700'>
+              <motion.p className='subtitle-white'
+                initial={{x: -75}}
+                animate={{x: 0}}
+                transition={{type: 'spring', duration: 0.9}}
+              >
                 With a degree in behavioral neuroscience, a creative eye for stunning and ergonomic UX/UI design,
                 and a powerful command of modern technologies to build quality interfaces and experiences, my strengths
                 lie at the intersection of technology and people.
-              </p>
-              <p className='subtitle-white' data-aos='fade-right' data-aos-duration='900'>My passion is building intuitive, efficient software that delights users and propels businesses forward.</p>
-              <div data-aos='fade-right' data-aos-duration='1100' className='my-work'>
+              </motion.p>
+              <motion.p className='subtitle-white'
+                initial={{x: -75}}
+                animate={{x: 0}}
+                transition={{type: 'spring', duration: 1}}
+              >
+                My passion is building intuitive, efficient software that delights users and propels businesses forward.
+              </motion.p>
+              <motion.div className='my-work'
+                initial={{x: -75}}
+                animate={{x: 0}}
+                transition={{type: 'spring', duration: 1.1}}
+              >
                 <ButtonPrimary link='/projects' content='See my work' />
                 <ButtonPrimary link={Resume} content='Download my resume' />
-              </div>
+              </motion.div>
             </div>
             <div className="right">
 

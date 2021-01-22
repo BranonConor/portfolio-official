@@ -6,6 +6,7 @@ import AOS from "aos";
 import Form from '../components/form'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {motion} from 'framer-motion'
 
 const ContactPage = () => {
   useEffect(() => {
@@ -19,8 +20,20 @@ const ContactPage = () => {
       <section className='page ContactPage'>
         <div className="two-column">
           <div className="title">
-            <h1 data-aos='fade-right' data-aos-duration='300'>Contact Me</h1>
-            <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>I'd love to hear from you!</h4>
+            <motion.h1
+              initial={{x: -75}}
+              animate={{x: 0}}
+              transition={{type: 'spring', duration: 0.5}}
+            >
+              Contact Me
+            </motion.h1>
+            <motion.h4 className='subtitle'
+              initial={{x: -75}}
+              animate={{x: 0}}
+              transition={{type: 'spring', duration: 0.7}}
+            >
+              I'd love to hear from you!
+            </motion.h4>
           </div>
           <div className="content">
             <div className="left">
