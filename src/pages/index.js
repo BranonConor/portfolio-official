@@ -65,9 +65,6 @@ const IndexPage = () => {
                 <ButtonPrimary link={Resume} content='Download my resume' />
               </motion.div>
             </div>
-            <div className="right">
-
-            </div>
           </div>
         </div>
         <TechGrid />
