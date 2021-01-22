@@ -1,0 +1,23 @@
+.TechGrid {
+    margin: 98px 0;
+    padding: 16px;
+    box-sizing: border-box;
+    background: var(--dark-bg);
+    border-radius: 10px;
+    box-shadow: vaR(--nav-shadow);
+}
+.TechGrid .tech {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px 0 0 0;
+}
+.TechGrid .tech .icon {
+    margin: 16px 32px 16px 0;
+    height: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .TechGrid .tech .icon {
+        height: 25px;
+    }
+}

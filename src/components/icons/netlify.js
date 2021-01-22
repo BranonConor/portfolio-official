@@ -2,7 +2,7 @@ import React from 'react'
 
 const NetlifyIcon = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" version="1.1" preserveAspectRatio="xMidYMid" classname='icon'>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" version="1.1" preserveAspectRatio="xMidYMid" className='icon'>
             <defs>
                 <radialGradient cx="50%" cy="-50%" fx="50%" fy="-50%" r="99.999879%" id="radialGradient-1">
                     <stop stopColor="#20C6B7" offset="0%"/>

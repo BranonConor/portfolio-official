@@ -8,6 +8,7 @@ import ButtonPrimary from '../components/buttons/button-primary'
 import Layout from "../components/layout"
 import Resume from '../images/resume.pdf'
 import SEO from "../components/seo"
+import TechGrid from '../components/grids/tech-grid'
 
 const IndexPage = () => {
   useEffect(() => {
@@ -42,6 +43,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
+        <TechGrid />
       </section>
     </Layout>
   )
