@@ -24,7 +24,7 @@ const ProjectGrid = () => {
             demoLink: 'http://dash-4-coronavirus.herokuapp.com/',
             codeLink: 'https://github.com/BranonConor/corona-dash',
             animation: 'fade-right',
-            animationTime: '300'
+            animationTime: 0.2
         },
         {
             name: 'Charter Healthcare Group',
@@ -42,7 +42,7 @@ const ProjectGrid = () => {
             demoLink: 'https://charter-official-prototype.netlify.app/',
             codeLink: false,
             animation: 'fade-right',
-            animationTime: '500'
+            animationTime: 0.3
         },
         {
             name: 'UNIFY Design System',
@@ -61,7 +61,7 @@ const ProjectGrid = () => {
             demoLink: 'https://unifydesign.netlify.app/',
             codeLink: false,
             animation: 'fade-right',
-            animationTime: '700'
+            animationTime: 0.4
         },
         {
             name: 'YelpCamp',
@@ -83,7 +83,7 @@ const ProjectGrid = () => {
             demoLink: false,
             codeLink: false,
             animation: 'fade-right',
-            animationTime: '900'
+            animationTime: 0.5
         },
         {
             name: 'Charter Rebranding',
@@ -97,7 +97,7 @@ const ProjectGrid = () => {
             demoLink: false,
             codeLink: false,
             animation: 'fade-right',
-            animationTime: '1100'
+            animationTime: 0.6
         },
         {
             name: 'TheraMind Centers',
@@ -114,7 +114,7 @@ const ProjectGrid = () => {
             demoLink: 'https://theramind-sb.com/',
             codeLink: false,
             animation: 'fade-right',
-            animationTime: '1100'
+            animationTime: 0.7
         },
     ]
 

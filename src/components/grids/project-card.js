@@ -6,6 +6,7 @@ import React, {useEffect} from 'react'
 import AOS from "aos";
 import CodeIcon from '../icons/code'
 import LinkIcon from '../icons/link'
+import {motion} from 'framer-motion'
 
 const ProjectCard = (props) => {
 
@@ -14,10 +15,22 @@ const ProjectCard = (props) => {
         AOS.refresh();
     });
 
-    const {name, role, description, technologies, demoLink, codeLink, animation, animationTime} = props;
+    const {name, role, description, technologies, demoLink, codeLink, animationTime} = props;
 
     return (
-        <div className="ProjectCard" data-aos={animation} data-aos-duration={animationTime}>
+        <motion.div 
+        className="ProjectCard" 
+        initial={{ rotate: 330, scale: 0, opacity: 0 }}
+        animate={{ 
+            rotate: 360, 
+            scale: 1, 
+            opacity: 1
+        }}
+        transition={{ 
+            type: 'spring',
+            duration: animationTime
+        }}
+        >
             <div className="card-content">
                 <h6>{name}</h6>
                 <p className='detail-title'>{role}</p>
@@ -32,7 +45,7 @@ const ProjectCard = (props) => {
                 <a href={demoLink} target='_blank' rel='noreferrer noopenner' className={ demoLink ? '' : 'disabled-link'}><LinkIcon /></a>
                 <a href={codeLink} target='_blank' rel='noreferrer noopenner' className={ codeLink ? '' : 'disabled-link'}><CodeIcon /></a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
