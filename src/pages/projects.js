@@ -6,6 +6,7 @@ import AOS from "aos";
 import Layout from "../components/layout"
 import ProjectGrid from "../components/grids/project-grid";
 import SEO from "../components/seo"
+import { motion } from 'framer-motion'
 
 const ProjectsPage = () => {
   useEffect(() => {
@@ -19,10 +20,20 @@ const ProjectsPage = () => {
       <section className='page ProjectsPage'>
         <div className="two-column">
           <div className="title">
-            <h1 data-aos='fade-right' data-aos-duration='300'>Projects</h1>
-            <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>
+            <motion.h1
+              initial={{x: -75}}
+              animate={{x: 0}}
+              transition={{type: 'spring', duration: 0.5}}
+            >
+              Projects
+            </motion.h1>
+            <motion.h4 className='subtitle'
+              initial={{x: -75}}
+              animate={{x: 0}}
+              transition={{type: 'spring', duration: 0.7}}
+            >
               Here are some recent projects I'm proud of.
-            </h4>
+            </motion.h4>
           </div>
         </div>
         <ProjectGrid />

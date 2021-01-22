@@ -9,6 +9,7 @@ import Layout from "../components/layout"
 import Resume from '../images/resume.pdf'
 import SEO from "../components/seo"
 import TechGrid from '../components/grids/tech-grid'
+import {motion} from 'framer-motion'
 
 const IndexPage = () => {
   useEffect(() => {
@@ -22,7 +23,13 @@ const IndexPage = () => {
       <section className='page IndexPage'>
         <div className="two-column">
           <div className="title">
-            <h1 data-aos='fade-right' data-aos-duration='300'>Hi, I'm Branon 👋🏼</h1>
+            <motion.h1
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              transition={{type: 'spring', duration: 1.5}}
+            >
+              Hi, I'm Branon<span>👋🏼</span>
+            </motion.h1>
             <h4 className='subtitle' data-aos='fade-right' data-aos-duration='500'>I'm a software engineer and UX designer.</h4>
           </div>
           <div className="content">
