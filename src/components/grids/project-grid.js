@@ -1,11 +1,11 @@
 import './project-grid.css'
 
+import React,{useState} from 'react'
+
 import ProjectCard from './project-card.js'
-import React from 'react'
 
 const ProjectGrid = () => {
-    
-    const projects = [
+    const [projects, setProjects] = useState([
         {
             name: 'Coronavirus Dashboard',
             role: 'Sole designer & engineer',
@@ -40,7 +40,7 @@ const ProjectGrid = () => {
                 'Netlify'
             ],
             demoLink: 'https://charter-official-prototype.netlify.app/',
-            codeLink: false,
+            codeLink: null,
             animation: 'fade-right',
             animationTime: 0.3
         },
@@ -59,7 +59,7 @@ const ProjectGrid = () => {
                 'Netlify'
             ],
             demoLink: 'https://unifydesign.netlify.app/',
-            codeLink: false,
+            codeLink: null,
             animation: 'fade-right',
             animationTime: 0.4
         },
@@ -80,8 +80,8 @@ const ProjectGrid = () => {
                 'PassportJS',
                 'Heroku'
             ],
-            demoLink: false,
-            codeLink: false,
+            demoLink: null,
+            codeLink: null,
             animation: 'fade-right',
             animationTime: 0.5
         },
@@ -94,8 +94,8 @@ const ProjectGrid = () => {
                 'Photoshop',
                 'Illustrator'
             ],
-            demoLink: false,
-            codeLink: false,
+            demoLink: null,
+            codeLink: null,
             animation: 'fade-right',
             animationTime: 0.6
         },
@@ -112,14 +112,18 @@ const ProjectGrid = () => {
                 'Kinsta'
             ],
             demoLink: 'https://theramind-sb.com/',
-            codeLink: false,
+            codeLink: null,
             animation: 'fade-right',
             animationTime: 0.7
         },
-    ]
+    ])
 
     return (
         <div className="ProjectGrid">
+            <div className="active-project">
+                <p style={{color: 'var(--blue-text', width: 'auto'}}>DRAG A PROJECT HERE TO LEARN MORE</p>
+            </div>
+            <div className='projects'>
             {projects.map(project => {
                 return (
                     <ProjectCard 
@@ -135,6 +139,7 @@ const ProjectGrid = () => {
                     />
                 )
             })}
+            </div>
         </div>
     )
 }

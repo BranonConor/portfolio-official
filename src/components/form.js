@@ -50,7 +50,7 @@ export default class Form extends React.Component {
         <div className="message">
             <label htmlFor="message">
               Message
-              <textarea name="message" id='message' placeholder='Leave me a message, make it entertaining.' required></textarea>
+              <textarea name="message" id='message' placeholder='Leave me a message' required></textarea>
             </label>
         </div>
         <input type="text" name="_gotcha" style={{display: 'none'}} />

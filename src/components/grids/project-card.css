@@ -11,6 +11,9 @@
     padding: 16px;
     height: auto;
 }
+.ProjectCard .card-content:hover {
+    cursor: grab;
+}
 .ProjectCard .technologies {
     list-style: none;
     display: flex;

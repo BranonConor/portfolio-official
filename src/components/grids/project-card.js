@@ -1,19 +1,11 @@
 import './project-card.css'
-import "aos/dist/aos.css";
 
-import React, {useEffect} from 'react'
-
-import AOS from "aos";
 import CodeIcon from '../icons/code'
 import LinkIcon from '../icons/link'
+import React from 'react'
 import {motion} from 'framer-motion'
 
 const ProjectCard = (props) => {
-
-    useEffect(() => {
-        AOS.init();
-        AOS.refresh();
-    });
 
     const {name, role, description, technologies, demoLink, codeLink, animationTime} = props;
 
@@ -30,6 +22,10 @@ const ProjectCard = (props) => {
             type: 'spring',
             duration: animationTime
         }}
+        drag
+        dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
+        dragElastic={1}
+        whileDrag={{scale: 0.75}}
         >
             <div className="card-content">
                 <h6>{name}</h6>
