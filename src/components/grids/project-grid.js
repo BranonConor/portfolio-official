@@ -175,7 +175,7 @@ const ProjectGrid = () => {
             <div className="ProjectGrid">
             <Droppable>
                     <div className="active-project">
-                        {isDropped && activeId ? showActiveProject(activeId) : <p style={{color: 'var(--blue-text', width: 'auto'}}>DRAG A PROJECT HERE TO LEARN MORE</p>}
+                        {isDropped && activeId ? showActiveProject(activeId) : <p style={{color: 'var(--blue-text)', width: 'auto'}}>DRAG A PROJECT HERE TO LEARN MORE</p>}
                     </div>
             </Droppable>
                 <div className='projects'>
