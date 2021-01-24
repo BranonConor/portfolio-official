@@ -127,37 +127,46 @@ const ProjectGrid = () => {
             id: 6
         },
     ])
+    
+    //State for sensing when something is dropped into a droppable
     const [isDropped, setIsDropped] = useState(false);
+    const [activeId, setActiveId] = useState(0);
+
     //Method for clearing active project when done
     const handleDelete = event => {
         event.preventDefault();
         setIsDropped(false);
-        console.log('CLICKED!!!!!');
     }
+
     //Render a project card up in the target drop zone when a project is dropped up there
-    const activeProject = (
-        <div className='active-wrapper'>
-            <ProjectCard 
-                name={projects[0].name}
-                role={projects[0].role}
-                description={projects[0].description}
-                technologies={projects[0].technologies}
-                demoLink={projects[0].demoLink}
-                codeLink={projects[0].codeLink}
-                animationType={projects[0].animation}
-                animationTime={projects[0].animationTime}
-                key={projects[0].id}
-            />
-            <div className='delete' onClick={handleDelete}>
-                <TrashIcon />
+    const showActiveProject = (id) => {
+
+        return (
+            <div className='active-wrapper'>
+                <ProjectCard 
+                    name={projects[id-1].name}
+                    role={projects[id-1].role}
+                    description={projects[id-1].description}
+                    technologies={projects[id-1].technologies}
+                    demoLink={projects[id-1].demoLink}
+                    codeLink={projects[id-1].codeLink}
+                    animationType={projects[id-1].animation}
+                    animationTime={projects[id-1].animationTime}
+                />
+                <div className='delete' onClick={handleDelete}>
+                    <TrashIcon />
+                </div>
             </div>
-        </div>
-      );
+        )
+    };
+
     //Method for handling the drags within DND Context component
-    const handleDragEnd = event  => {
+    const handleDragEnd = (event)  => {
         if (event.over && event.over.id === 'droppable') {
             setIsDropped(true)
         }
+        //Set the active project to the id of whatever was dropped into the target zone
+        setActiveId(event.active.id);
     }
 
 
@@ -166,7 +175,7 @@ const ProjectGrid = () => {
             <div className="ProjectGrid">
             <Droppable>
                     <div className="active-project">
-                        {isDropped ? activeProject : <p style={{color: 'var(--blue-text', width: 'auto'}}>DRAG A PROJECT HERE TO LEARN MORE</p>}
+                        {isDropped && activeId ? showActiveProject(activeId) : <p style={{color: 'var(--blue-text', width: 'auto'}}>DRAG A PROJECT HERE TO LEARN MORE</p>}
                     </div>
             </Droppable>
                 <div className='projects'>
