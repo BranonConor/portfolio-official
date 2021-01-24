@@ -21,16 +21,16 @@ const ProjectsPage = () => {
         <div className="two-column">
           <div className="title">
             <motion.h1
-              initial={{x: -75}}
-              animate={{x: 0}}
-              transition={{type: 'spring', duration: 0.5}}
+              initial={{x: -75, opacity: 0}}
+              animate={{x: 0, opacity: 1}}
+              transition={{type: 'spring', duration: 0.6}}
             >
               Projects
             </motion.h1>
             <motion.h4 className='subtitle'
-              initial={{x: -75}}
-              animate={{x: 0}}
-              transition={{type: 'spring', duration: 0.7}}
+              initial={{x: -75, opacity: 0}}
+              animate={{x: 0, opacity: 1}}
+              transition={{type: 'spring', duration: 0.8}}
             >
               Here are some recent projects I'm proud of.
             </motion.h4>

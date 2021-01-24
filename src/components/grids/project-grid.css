@@ -44,8 +44,28 @@
     .ProjectGrid {
         margin: 0 0;
     }
-    .ProjectGrid .ProjectCard {
-        width: 100%;
+    .ProjectGrid .projects{
         margin: 16px 0;
+    }
+    .ProjectGrid .projects .ProjectCard {
+        width: 100%;
+        margin: 4px 8px 4px 0;
+    }
+    .ProjectGrid .projects  .ProjectCard .card-content .detail-text {
+        display: none;
+    }
+    .ProjectGrid .projects  .ProjectCard .technologies {
+        display: none;
+    }
+    .ProjectGrid .projects  .ProjectCard .links {
+        display: none;
+    }
+    .active-project .ProjectCard p {
+        text-align: left;
+    }
+    .active-project p {
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center;
     }
 }
