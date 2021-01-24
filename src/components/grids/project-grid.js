@@ -2,11 +2,17 @@ import './project-grid.css'
 
 import React,{useState} from 'react'
 
+import CharterRebrandingDocs from '../documentation/charter-rebranding'
+import CharterWebsiteDocs from '../documentation/charter-website'
+import CovidDashDocs from '../documentation/coronavirus-dashboard'
 import {DndContext} from '@dnd-kit/core'
 import Draggable from './draggable'
 import Droppable from './droppable'
 import ProjectCard from './project-card.js'
+import TheraMindDocs from '../documentation/theramind'
 import TrashIcon from '../icons/trash'
+import UnifyDocs from '../documentation/unify'
+import YelpCampDocs from '../documentation/yelp-camp'
 
 const ProjectGrid = () => {
     const [projects, setProjects] = useState([
@@ -29,6 +35,7 @@ const ProjectGrid = () => {
             codeLink: 'https://github.com/BranonConor/corona-dash',
             animation: 'spring',
             animationTime: 0.2,
+            docs: <CovidDashDocs />,
             id: 1
         },
         {
@@ -48,6 +55,7 @@ const ProjectGrid = () => {
             codeLink: null,
             animation: 'spring',
             animationTime: 0.3,
+            docs: <CharterWebsiteDocs />,
             id: 2
         },
         {
@@ -68,6 +76,7 @@ const ProjectGrid = () => {
             codeLink: null,
             animation: 'spring',
             animationTime: 0.4,
+            docs: <UnifyDocs />,
             id: 3
         },
         {
@@ -91,6 +100,7 @@ const ProjectGrid = () => {
             codeLink: null,
             animation: 'spring',
             animationTime: 0.5,
+            docs: <YelpCampDocs />,
             id: 4
         },
         {
@@ -106,6 +116,7 @@ const ProjectGrid = () => {
             codeLink: null,
             animation: 'spring',
             animationTime: 0.6,
+            docs: <CharterRebrandingDocs />,
             id: 5
         },
         {
@@ -124,6 +135,7 @@ const ProjectGrid = () => {
             codeLink: null,
             animation: 'spring',
             animationTime: 0.7,
+            docs: <TheraMindDocs />,
             id: 6
         },
     ])
@@ -131,11 +143,16 @@ const ProjectGrid = () => {
     //State for sensing when something is dropped into a droppable
     const [isDropped, setIsDropped] = useState(false);
     const [activeId, setActiveId] = useState(0);
+    const [activeDocs, setActiveDocs] = useState(false);
 
     //Method for clearing active project when done
     const handleDelete = event => {
         event.preventDefault();
         setIsDropped(false);
+        //Set the active project to the id of whatever was dropped into the target zone
+        setActiveId(null);
+        //Set the docs to appear for that project
+        setActiveDocs(false);
     }
 
     //Render a project card up in the target drop zone when a project is dropped up there
@@ -159,6 +176,9 @@ const ProjectGrid = () => {
             </div>
         )
     };
+    const showActiveDocs = (id) => {
+        return projects[id-1].docs;
+    };
 
     //Method for handling the drags within DND Context component
     const handleDragEnd = (event)  => {
@@ -167,6 +187,8 @@ const ProjectGrid = () => {
         }
         //Set the active project to the id of whatever was dropped into the target zone
         setActiveId(event.active.id);
+        //Set the docs to appear for that project
+        setActiveDocs(true);
     }
 
 
@@ -179,8 +201,8 @@ const ProjectGrid = () => {
                     </div>
             </Droppable>
                 <div className='projects'>
-                    {isDropped ? 
-                        'More information coming soon! 😎🎉'
+                    {isDropped && activeDocs ? 
+                        showActiveDocs(activeId)
                         :
                         projects.map(project => {
                             return (
