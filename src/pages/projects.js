@@ -1,4 +1,5 @@
 import "aos/dist/aos.css";
+import './projects.css'
 
 import React, {useEffect} from "react"
 
