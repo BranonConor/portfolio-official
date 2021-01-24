@@ -151,7 +151,7 @@ const ProjectGrid = () => {
                     demoLink={projects[id-1].demoLink}
                     codeLink={projects[id-1].codeLink}
                     animationType={projects[id-1].animation}
-                    animationTime={projects[id-1].animationTime}
+                    animationTime={0.25}
                 />
                 <div className='delete' onClick={handleDelete}>
                     <TrashIcon />
