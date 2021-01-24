@@ -192,7 +192,7 @@ const ProjectGrid = () => {
                                         technologies={project.technologies}
                                         demoLink={project.demoLink}
                                         codeLink={project.codeLink}
-                                        animation={project.animation}
+                                        animationType={project.animation}
                                         animationTime={project.animationTime}
                                         key={project.id}
                                     />
