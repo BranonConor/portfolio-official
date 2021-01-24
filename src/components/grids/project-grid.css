@@ -64,9 +64,15 @@
     }
     .ProjectGrid .projects{
         margin: 16px 0;
+        flex-direction: column;
     }
-    .ProjectGrid .ProjectCard {
+    .ProjectGrid .projects div[role="button"] {
+        width: 100%;
+    }
+    .ProjectGrid .projects .ProjectCard {
         height: 75px;
+        width: 100%;
+        margin: 4px 0;
     }
     .ProjectGrid .ProjectCard .card-content{
         box-sizing: border-box;
