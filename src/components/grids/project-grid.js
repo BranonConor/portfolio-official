@@ -180,7 +180,7 @@ const ProjectGrid = () => {
             </Droppable>
                 <div className='projects'>
                     {isDropped ? 
-                        'BYE CARDS!'
+                        'More information coming soon! 😎🎉'
                         :
                         projects.map(project => {
                             return (
