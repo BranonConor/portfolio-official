@@ -6,6 +6,7 @@ import {DndContext} from '@dnd-kit/core'
 import Draggable from './draggable'
 import Droppable from './droppable'
 import ProjectCard from './project-card.js'
+import TrashIcon from '../icons/trash'
 
 const ProjectGrid = () => {
     const [projects, setProjects] = useState([
@@ -127,32 +128,39 @@ const ProjectGrid = () => {
         },
     ])
     const [isDropped, setIsDropped] = useState(false);
-    const draggableMarkup = (
-        <Draggable>
-            <div>
-                Hello
-            </div>
-        </Draggable>
-      );
-      //Render a project card up in the target drop zone when a project is dropped up there
+    //Method for clearing active project when done
+    const handleDelete = event => {
+        event.preventDefault();
+        setIsDropped(false);
+        console.log('CLICKED!!!!!');
+    }
+    //Render a project card up in the target drop zone when a project is dropped up there
     const activeProject = (
-        <ProjectCard 
-            name={projects[0].name}
-            role={projects[0].role}
-            description={projects[0].description}
-            technologies={projects[0].technologies}
-            demoLink={projects[0].demoLink}
-            codeLink={projects[0].codeLink}
-            animationType={projects[0].animation}
-            animationTime={projects[0].animationTime}
-            key={projects[0].id}
-        />
+        <div className='active-wrapper'>
+            <ProjectCard 
+                name={projects[0].name}
+                role={projects[0].role}
+                description={projects[0].description}
+                technologies={projects[0].technologies}
+                demoLink={projects[0].demoLink}
+                codeLink={projects[0].codeLink}
+                animationType={projects[0].animation}
+                animationTime={projects[0].animationTime}
+                key={projects[0].id}
+            />
+            <div className='delete' onClick={handleDelete}>
+                <TrashIcon />
+            </div>
+        </div>
       );
+    //Method for handling the drags within DND Context component
     const handleDragEnd = event  => {
         if (event.over && event.over.id === 'droppable') {
             setIsDropped(true)
         }
     }
+
+
     return (
         <DndContext onDragEnd={handleDragEnd}>
             <div className="ProjectGrid">
