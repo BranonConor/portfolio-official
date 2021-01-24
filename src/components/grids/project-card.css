@@ -1,7 +1,7 @@
 .ProjectCard {
     background: var(--dark-bg);
     width: 320px;
-    height: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: var(--nav-shadow);
     margin: 16px 16px 16px 0;

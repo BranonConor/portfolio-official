@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@dnd-kit/core": "^1.0.1",
     "aos": "^2.3.4",
     "framer-motion": "^3.2.2-rc.1",
     "gatsby": "^2.26.1",

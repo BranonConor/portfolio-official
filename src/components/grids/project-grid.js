@@ -2,6 +2,9 @@ import './project-grid.css'
 
 import React,{useState} from 'react'
 
+import {DndContext} from '@dnd-kit/core'
+import Draggable from './draggable'
+import Droppable from './droppable'
 import ProjectCard from './project-card.js'
 
 const ProjectGrid = () => {
@@ -23,8 +26,9 @@ const ProjectGrid = () => {
             ],
             demoLink: 'http://dash-4-coronavirus.herokuapp.com/',
             codeLink: 'https://github.com/BranonConor/corona-dash',
-            animation: 'fade-right',
-            animationTime: 0.2
+            animation: 'spring',
+            animationTime: 0.2,
+            id: 1
         },
         {
             name: 'Charter Healthcare Group',
@@ -41,8 +45,9 @@ const ProjectGrid = () => {
             ],
             demoLink: 'https://charter-official-prototype.netlify.app/',
             codeLink: null,
-            animation: 'fade-right',
-            animationTime: 0.3
+            animation: 'spring',
+            animationTime: 0.3,
+            id: 2
         },
         {
             name: 'UNIFY Design System',
@@ -60,8 +65,9 @@ const ProjectGrid = () => {
             ],
             demoLink: 'https://unifydesign.netlify.app/',
             codeLink: null,
-            animation: 'fade-right',
-            animationTime: 0.4
+            animation: 'spring',
+            animationTime: 0.4,
+            id: 3
         },
         {
             name: 'YelpCamp',
@@ -82,8 +88,9 @@ const ProjectGrid = () => {
             ],
             demoLink: null,
             codeLink: null,
-            animation: 'fade-right',
-            animationTime: 0.5
+            animation: 'spring',
+            animationTime: 0.5,
+            id: 4
         },
         {
             name: 'Charter Rebranding',
@@ -96,8 +103,9 @@ const ProjectGrid = () => {
             ],
             demoLink: null,
             codeLink: null,
-            animation: 'fade-right',
-            animationTime: 0.6
+            animation: 'spring',
+            animationTime: 0.6,
+            id: 5
         },
         {
             name: 'TheraMind Centers',
@@ -113,34 +121,71 @@ const ProjectGrid = () => {
             ],
             demoLink: 'https://theramind-sb.com/',
             codeLink: null,
-            animation: 'fade-right',
-            animationTime: 0.7
+            animation: 'spring',
+            animationTime: 0.7,
+            id: 6
         },
     ])
-
+    const [isDropped, setIsDropped] = useState(false);
+    const draggableMarkup = (
+        <Draggable>
+            <div>
+                Hello
+            </div>
+        </Draggable>
+      );
+      //Render a project card up in the target drop zone when a project is dropped up there
+    const activeProject = (
+        <ProjectCard 
+            name={projects[0].name}
+            role={projects[0].role}
+            description={projects[0].description}
+            technologies={projects[0].technologies}
+            demoLink={projects[0].demoLink}
+            codeLink={projects[0].codeLink}
+            animationType={projects[0].animation}
+            animationTime={projects[0].animationTime}
+            key={projects[0].id}
+        />
+      );
+    const handleDragEnd = event  => {
+        if (event.over && event.over.id === 'droppable') {
+            setIsDropped(true)
+        }
+    }
     return (
-        <div className="ProjectGrid">
-            <div className="active-project">
-                <p style={{color: 'var(--blue-text', width: 'auto'}}>DRAG A PROJECT HERE TO LEARN MORE</p>
+        <DndContext onDragEnd={handleDragEnd}>
+            <div className="ProjectGrid">
+            <Droppable>
+                    <div className="active-project">
+                        {isDropped ? activeProject : <p style={{color: 'var(--blue-text', width: 'auto'}}>DRAG A PROJECT HERE TO LEARN MORE</p>}
+                    </div>
+            </Droppable>
+                <div className='projects'>
+                    {isDropped ? 
+                        'BYE CARDS!'
+                        :
+                        projects.map(project => {
+                            return (
+                                <Draggable id={project.id}>
+                                    <ProjectCard 
+                                        name={project.name}
+                                        role={project.role}
+                                        description={project.description}
+                                        technologies={project.technologies}
+                                        demoLink={project.demoLink}
+                                        codeLink={project.codeLink}
+                                        animation={project.animation}
+                                        animationTime={project.animationTime}
+                                        key={project.id}
+                                    />
+                                </Draggable>
+                            )
+                        })
+                    }
+                </div>
             </div>
-            <div className='projects'>
-            {projects.map(project => {
-                return (
-                    <ProjectCard 
-                        name={project.name}
-                        role={project.role}
-                        description={project.description}
-                        technologies={project.technologies}
-                        demoLink={project.demoLink}
-                        codeLink={project.codeLink}
-                        animation={project.animation}
-                        animationTime={project.animationTime}
-                        key={project.name}
-                    />
-                )
-            })}
-            </div>
-        </div>
+        </DndContext>
     )
 }
 

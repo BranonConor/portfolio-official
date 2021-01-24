@@ -7,7 +7,7 @@ import {motion} from 'framer-motion'
 
 const ProjectCard = (props) => {
 
-    const {name, role, description, technologies, demoLink, codeLink, animationTime} = props;
+    const {name, role, description, technologies, demoLink, codeLink, animationType, animationTime} = props;
 
     return (
         <motion.div 
@@ -19,12 +19,11 @@ const ProjectCard = (props) => {
             opacity: 1
         }}
         transition={{ 
-            type: 'spring',
+            type: animationType,
             duration: animationTime
         }}
         drag
         dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
-        dragElastic={1}
         whileDrag={{scale: 0.75}}
         >
             <div className="card-content">
