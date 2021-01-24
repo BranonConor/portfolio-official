@@ -1,7 +1,7 @@
 .ProjectCard {
     background: var(--dark-bg);
     width: 320px;
-    height: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: var(--nav-shadow);
     margin: 16px 16px 16px 0;
@@ -10,6 +10,9 @@
     box-sizing: border-box;
     padding: 16px;
     height: auto;
+}
+.ProjectCard .card-content:hover {
+    cursor: grab;
 }
 .ProjectCard .technologies {
     list-style: none;
@@ -48,4 +51,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.ProjectCard .links .icon {
+    position: relative;
+    top: 0;
 }

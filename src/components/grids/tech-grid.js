@@ -60,44 +60,40 @@ const TechGrid = () => {
             animationTime: 0.7
         },
         {
-            svg: <JqueryIcon />,
+            svg: <NodeIcon />,
             animationTime: 0.8
         },
         {
-            svg: <NodeIcon />,
+            svg: <ExpressIcon />,
             animationTime: 0.9
         },
         {
-            svg: <ExpressIcon />,
+            svg: <MongoIcon />,
             animationTime: 1
         },
         {
-            svg: <MongoIcon />,
+            svg: <GitIcon />,
             animationTime: 1.1
         },
         {
-            svg: <GitIcon />,
+            svg: <GithubIcon />,
             animationTime: 1.2
         },
         {
-            svg: <GithubIcon />,
+            svg: <NetlifyIcon />,
             animationTime: 1.3
         },
         {
-            svg: <NetlifyIcon />,
+            svg: <HerokuIcon />,
             animationTime: 1.4
         },
         {
-            svg: <HerokuIcon />,
+            svg: <NPMIcon />,
             animationTime: 1.5
         },
         {
-            svg: <NPMIcon />,
-            animationTime: 1.6
-        },
-        {
             svg: <FigmaIcon />,
-            animationTime: 1.7
+            animationTime: 1.6
         },
     ]
     return (
@@ -119,6 +115,7 @@ const TechGrid = () => {
                             type: 'spring',
                             duration: logo.animationTime
                         }}
+                        key={logo.animationTime}
                         >
                             {logo.svg}
                         </motion.div>

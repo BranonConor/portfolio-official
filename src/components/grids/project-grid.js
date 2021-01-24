@@ -1,11 +1,15 @@
 import './project-grid.css'
 
+import React,{useState} from 'react'
+
+import {DndContext} from '@dnd-kit/core'
+import Draggable from './draggable'
+import Droppable from './droppable'
 import ProjectCard from './project-card.js'
-import React from 'react'
+import TrashIcon from '../icons/trash'
 
 const ProjectGrid = () => {
-    
-    const projects = [
+    const [projects, setProjects] = useState([
         {
             name: 'Coronavirus Dashboard',
             role: 'Sole designer & engineer',
@@ -23,8 +27,9 @@ const ProjectGrid = () => {
             ],
             demoLink: 'http://dash-4-coronavirus.herokuapp.com/',
             codeLink: 'https://github.com/BranonConor/corona-dash',
-            animation: 'fade-right',
-            animationTime: 0.2
+            animation: 'spring',
+            animationTime: 0.2,
+            id: 1
         },
         {
             name: 'Charter Healthcare Group',
@@ -40,9 +45,10 @@ const ProjectGrid = () => {
                 'Netlify'
             ],
             demoLink: 'https://charter-official-prototype.netlify.app/',
-            codeLink: false,
-            animation: 'fade-right',
-            animationTime: 0.3
+            codeLink: null,
+            animation: 'spring',
+            animationTime: 0.3,
+            id: 2
         },
         {
             name: 'UNIFY Design System',
@@ -59,9 +65,10 @@ const ProjectGrid = () => {
                 'Netlify'
             ],
             demoLink: 'https://unifydesign.netlify.app/',
-            codeLink: false,
-            animation: 'fade-right',
-            animationTime: 0.4
+            codeLink: null,
+            animation: 'spring',
+            animationTime: 0.4,
+            id: 3
         },
         {
             name: 'YelpCamp',
@@ -80,10 +87,11 @@ const ProjectGrid = () => {
                 'PassportJS',
                 'Heroku'
             ],
-            demoLink: false,
-            codeLink: false,
-            animation: 'fade-right',
-            animationTime: 0.5
+            demoLink: null,
+            codeLink: null,
+            animation: 'spring',
+            animationTime: 0.5,
+            id: 4
         },
         {
             name: 'Charter Rebranding',
@@ -94,10 +102,11 @@ const ProjectGrid = () => {
                 'Photoshop',
                 'Illustrator'
             ],
-            demoLink: false,
-            codeLink: false,
-            animation: 'fade-right',
-            animationTime: 0.6
+            demoLink: null,
+            codeLink: null,
+            animation: 'spring',
+            animationTime: 0.6,
+            id: 5
         },
         {
             name: 'TheraMind Centers',
@@ -112,30 +121,88 @@ const ProjectGrid = () => {
                 'Kinsta'
             ],
             demoLink: 'https://theramind-sb.com/',
-            codeLink: false,
-            animation: 'fade-right',
-            animationTime: 0.7
+            codeLink: null,
+            animation: 'spring',
+            animationTime: 0.7,
+            id: 6
         },
-    ]
+    ])
+    
+    //State for sensing when something is dropped into a droppable
+    const [isDropped, setIsDropped] = useState(false);
+    const [activeId, setActiveId] = useState(0);
+
+    //Method for clearing active project when done
+    const handleDelete = event => {
+        event.preventDefault();
+        setIsDropped(false);
+    }
+
+    //Render a project card up in the target drop zone when a project is dropped up there
+    const showActiveProject = (id) => {
+
+        return (
+            <div className='active-wrapper'>
+                <ProjectCard 
+                    name={projects[id-1].name}
+                    role={projects[id-1].role}
+                    description={projects[id-1].description}
+                    technologies={projects[id-1].technologies}
+                    demoLink={projects[id-1].demoLink}
+                    codeLink={projects[id-1].codeLink}
+                    animationType={projects[id-1].animation}
+                    animationTime={projects[id-1].animationTime}
+                />
+                <div className='delete' onClick={handleDelete}>
+                    <TrashIcon />
+                </div>
+            </div>
+        )
+    };
+
+    //Method for handling the drags within DND Context component
+    const handleDragEnd = (event)  => {
+        if (event.over && event.over.id === 'droppable') {
+            setIsDropped(true)
+        }
+        //Set the active project to the id of whatever was dropped into the target zone
+        setActiveId(event.active.id);
+    }
+
 
     return (
-        <div className="ProjectGrid">
-            {projects.map(project => {
-                return (
-                    <ProjectCard 
-                        name={project.name}
-                        role={project.role}
-                        description={project.description}
-                        technologies={project.technologies}
-                        demoLink={project.demoLink}
-                        codeLink={project.codeLink}
-                        animation={project.animation}
-                        animationTime={project.animationTime}
-                        key={project.name}
-                    />
-                )
-            })}
-        </div>
+        <DndContext onDragEnd={handleDragEnd}>
+            <div className="ProjectGrid">
+            <Droppable>
+                    <div className="active-project">
+                        {isDropped && activeId ? showActiveProject(activeId) : <p style={{color: 'var(--blue-text', width: 'auto'}}>DRAG A PROJECT HERE TO LEARN MORE</p>}
+                    </div>
+            </Droppable>
+                <div className='projects'>
+                    {isDropped ? 
+                        'BYE CARDS!'
+                        :
+                        projects.map(project => {
+                            return (
+                                <Draggable id={project.id}>
+                                    <ProjectCard 
+                                        name={project.name}
+                                        role={project.role}
+                                        description={project.description}
+                                        technologies={project.technologies}
+                                        demoLink={project.demoLink}
+                                        codeLink={project.codeLink}
+                                        animation={project.animation}
+                                        animationTime={project.animationTime}
+                                        key={project.id}
+                                    />
+                                </Draggable>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </DndContext>
     )
 }
 

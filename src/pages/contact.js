@@ -39,9 +39,6 @@ const ContactPage = () => {
             <div className="left">
               <Form />
             </div>
-            <div className="right">
-              
-            </div>
           </div>
         </div>
       </section>
