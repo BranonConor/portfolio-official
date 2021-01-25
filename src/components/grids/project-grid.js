@@ -104,8 +104,8 @@ const ProjectGrid = () => {
             id: 4
         },
         {
-            name: 'Charter Rebranding',
-            role: 'UX Designer',
+            name: 'Charter Logo Redesign',
+            role: 'UX Designer & Creative Lead',
             description: 'I redesigned the logo and company brand for Charter Healthcare Group, a large healthcare company in southern California.',
             technologies: [
                 'Figma',
