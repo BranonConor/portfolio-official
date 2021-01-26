@@ -112,7 +112,7 @@ const ProjectGrid = () => {
                 'Photoshop',
                 'Illustrator'
             ],
-            demoLink: null,
+            demoLink: 'https://unifydesign.netlify.app/logos/',
             codeLink: null,
             animation: 'spring',
             animationTime: 0.6,
