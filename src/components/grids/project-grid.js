@@ -12,13 +12,14 @@ import ProjectCard from './project-card.js'
 import TheraMindDocs from '../documentation/theramind'
 import TrashIcon from '../icons/trash'
 import UnifyDocs from '../documentation/unify'
+import WSIWdocs from '../documentation/wsiw'
 import YelpCampDocs from '../documentation/yelp-camp'
 
 const ProjectGrid = () => {
     const [projects, setProjects] = useState([
         {
             name: 'Coronavirus Dashboard',
-            role: 'Sole designer & engineer',
+            role: 'Fullstack engineer & designer',
             description: 'In light of the COVID pandemic, I wanted to provide a user-friendly, intuitive dashboard to help people stay informed on latest coronavirus updates.',
             technologies: [
                 'HTML',
@@ -40,7 +41,7 @@ const ProjectGrid = () => {
         },
         {
             name: 'Charter Healthcare Group',
-            role: 'Sole designer & engineer',
+            role: 'Frontend engineer & designer',
             description: 'After creating the UNIFY Design System, I designed and engineered a brand new corporate website for Charter healthcare Group.',
             technologies: [
                 'HTML',
@@ -60,7 +61,7 @@ const ProjectGrid = () => {
         },
         {
             name: 'UNIFY Design System',
-            role: 'Sole designer & engineer',
+            role: 'Frontend engineer & designer',
             description: 'I created a componentized design system from scratch to unify UX/UI across software projects, wrapped up in nice web app with code and design documentation.',
             technologies: [
                 'HTML',
@@ -81,7 +82,7 @@ const ProjectGrid = () => {
         },
         {
             name: 'YelpCamp',
-            role: 'Engineering Student',
+            role: 'Fullstack Engineering Student',
             description: 'I built a full-stack CRUD app with authentication, user profiles, comments, reviews, etc. for campsites as a course project.',
             technologies: [
                 'HTML',
@@ -104,6 +105,27 @@ const ProjectGrid = () => {
             id: 4
         },
         {
+            name: 'What Should I Wear?',
+            role: 'Fullstack engineer & designer',
+            description: 'I redesigned the logo and company brand for Charter Healthcare Group, a large healthcare company in southern California.',
+            technologies: [
+                'HTML',
+                'CSS',
+                'JS',
+                'NodeJS',
+                'ExpressJS',
+                'WeatherAPI',
+                'EJS',
+                'NPM'
+            ],
+            demoLink: 'https://what-do-i-wear.herokuapp.com',
+            codeLink: 'https://github.com/BranonConor/weather-app',
+            animation: 'spring',
+            animationTime: 0.6,
+            docs: <WSIWdocs />,
+            id: 5
+        },
+        {
             name: 'Charter Logo Redesign',
             role: 'UX Designer & Creative Lead',
             description: 'I redesigned the logo and company brand for Charter Healthcare Group, a large healthcare company in southern California.',
@@ -115,14 +137,14 @@ const ProjectGrid = () => {
             demoLink: 'https://unifydesign.netlify.app/logos/',
             codeLink: null,
             animation: 'spring',
-            animationTime: 0.6,
+            animationTime: 0.7,
             docs: <CharterRebrandingDocs />,
-            id: 5
+            id: 6
         },
         {
             name: 'TheraMind Centers',
             role: 'Web developer consultant',
-            description: 'I worked with a UX Designer as the technical lead to create a series of new, beautiful websites with intuitive CMS solutions for TheraMind clinics in California.',
+            description: 'I worked with a UX Designer as the technical lead to create a series of new, beautiful websites with intuitive CMS solutions for the TheraMind clinics.',
             technologies: [
                 'HTML',
                 'CSS',
@@ -134,9 +156,9 @@ const ProjectGrid = () => {
             demoLink: 'https://theramind-sb.com/',
             codeLink: null,
             animation: 'spring',
-            animationTime: 0.7,
+            animationTime: 0.8,
             docs: <TheraMindDocs />,
-            id: 6
+            id: 7
         },
     ])
     

@@ -98,7 +98,7 @@ const CovidDashDocs = () => {
                         <h6 className="subtitle-blue">What I learned</h6>
                         <p>
                             I learned a great deal about CMS solutions from this project. I learned the ins-and-outs of Wordpress development, from the building and hosting of a site to the plugin ecosystem
-                            and its various options for building out the interfaces (themes, Elementor, adding custom CSS, etc.). I also learned a TON about the flashy new 'JAMstack' as folks are calling it.
+                            and its various options for building out the interfaces (themes, Elementor, adding custom CSS, etc.). I also learned a TON about JAMstack development.
                             This stack is super powerful for modern CMS solutions, allowing you to build out interfaces using whatever tech you'd like (React, GatsbyJS, Hexo, etc.), and hook it into any
                             compatible headless CMS dashboard software that you'd like using REST APIs, Wordpress included! 
                         </p>
