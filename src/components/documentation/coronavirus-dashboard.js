@@ -74,6 +74,7 @@ const CovidDashDocs = () => {
                             <li>NPM</li>
                             <li>EJS</li>
                             <li>Heroku</li>
+                            <li>Git/Github</li>
                         </ul>
                         <h6 className="subtitle-blue">What I learned</h6>
                         <p>
