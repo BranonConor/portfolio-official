@@ -4,6 +4,7 @@ import React,{useState} from 'react'
 
 import CharterRebrandingDocs from '../documentation/charter-rebranding'
 import CharterWebsiteDocs from '../documentation/charter-website'
+import ClosetCastDocs from '../documentation/closet-cast'
 import CovidDashDocs from '../documentation/coronavirus-dashboard'
 import {DndContext} from '@dnd-kit/core'
 import Draggable from './draggable'
@@ -12,7 +13,6 @@ import ProjectCard from './project-card.js'
 import TheraMindDocs from '../documentation/theramind'
 import TrashIcon from '../icons/trash'
 import UnifyDocs from '../documentation/unify'
-import WSIWdocs from '../documentation/wsiw'
 import YelpCampDocs from '../documentation/yelp-camp'
 
 const ProjectGrid = () => {
@@ -105,9 +105,9 @@ const ProjectGrid = () => {
             id: 4
         },
         {
-            name: 'What Should I Wear?',
+            name: 'ClosetCast',
             role: 'Fullstack engineer & designer',
-            description: 'I redesigned the logo and company brand for Charter Healthcare Group, a large healthcare company in southern California.',
+            description: 'I built a web app that programmatically gives outfit suggestions based on the weather in your location.',
             technologies: [
                 'HTML',
                 'CSS',
@@ -118,11 +118,11 @@ const ProjectGrid = () => {
                 'EJS',
                 'NPM'
             ],
-            demoLink: 'https://what-do-i-wear.herokuapp.com',
+            demoLink: 'https://closetcast.herokuapp.com',
             codeLink: 'https://github.com/BranonConor/weather-app',
             animation: 'spring',
             animationTime: 0.6,
-            docs: <WSIWdocs />,
+            docs: <ClosetCastDocs />,
             id: 5
         },
         {
