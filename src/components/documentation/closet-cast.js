@@ -1,10 +1,10 @@
 import ButtonPrimaryExternal from '../buttons/button-primary-external'
-import HomePage from '../../images/wsiw/home.png'
-import Page from '../../images/wsiw/landing.png'
+import HomePage from '../../images/closet-cast/home.png'
+import Page from '../../images/closet-cast/landing.jpg'
 import React from 'react'
 import {motion} from 'framer-motion'
 
-const WSIWdocs = () => {
+const ClosetCastDocs = () => {
     return(
         <section className='docs'>
             <div className="two-column">
@@ -18,7 +18,7 @@ const WSIWdocs = () => {
                         animate={{x: 0, opacity: 1}}
                         transition={{type: 'spring', duration: 1.5}}     
                     >
-                        What Do I Wear?
+                        ClosetCast
                     </motion.h5>
                     <motion.h6 className='subtitle'
                         initial={{x: -75, opacity: 0}}
@@ -42,7 +42,7 @@ const WSIWdocs = () => {
                         </p>
                         <p className='subtitle' style={{marginBottom: '32px'}}>
                             Being the good husband and software developer I try to be, I thought "What if I made an app that could programmatically tell us what
-                            to wear without us having to walk down all those stairs?" Hence, What Do I Wear was born. 
+                            to wear without us having to walk down all those stairs?" Hence, ClosetCast was born - a forecast for your closet. 
                         </p>
                         <h6 className="subtitle-blue">The Design</h6>
                         <p>
@@ -65,7 +65,7 @@ const WSIWdocs = () => {
                         </p>
                         <h6 className='subtitle-blue'>The Code</h6>
                         <p>
-                            What Do I Wear is a simple but effective and lightweight app made in vanilla HTML, CSS, and JavaScript on the front end, using EJS as a templating language.
+                            ClosetCast is a simple but effective and lightweight app made in vanilla HTML, CSS, and JavaScript on the front end, using EJS as a templating language.
                             The backend is a simple setup with NodeJS and Express, making calls to a RESTful weather API. It's hosted on Heroku using their free tier, with continuous development
                             and integration setup through integration with Git/Github.
                         </p>
@@ -103,7 +103,7 @@ const WSIWdocs = () => {
                         <h6 className="subtitle-blue">Take a look!</h6>
                         <img src={HomePage} alt="Home page"/>
                         <img src={Page} alt="Second page"/>
-                        <ButtonPrimaryExternal link='http://what-do-i-wear.herokuapp.com/' content='See live project ✨' />
+                        <ButtonPrimaryExternal link='http://closetcast.herokuapp.com/' content='See live project ✨' />
                         <ButtonPrimaryExternal link='https://github.com/BranonConor/weather-app' content='See the repo 🛠' />
                     </div>
                 </motion.div>
@@ -113,4 +113,4 @@ const WSIWdocs = () => {
     )
 }
 
-export default WSIWdocs
+export default ClosetCastDocs
