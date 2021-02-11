@@ -47,11 +47,11 @@ const ClosetCastDocs = () => {
                         <h6 className="subtitle-blue">The Design</h6>
                         <p>
                             I wanted to make another dashboard design with this app, but in an effort to try something new I decided this UI 
-                            would feature a modern design trend called neumorhpism.
+                            would feature a modern design trend called neumorphism.
                         </p>
                         <p>
                             Neumorphism is an interesting, and somewhat controversial, UI design trend gaining steam in 2020. It serves as a juxtaposition to skeumorphism, which you may
-                            remember in the earlier iOS app designs. Skeumorphism features a vintage, analog design, like Instagram's old camera and Youtube's old TV screen app design. Neumorphism
+                            remember in the earlier iOS app designs. Skeumorphism features a vintage, analog graphic design, like Instagram's old camera and Youtube's old TV screen app design. Neumorphism
                             is the opposite: it's a minimalistic and futuristic look in which the only real interface designs rely on light and dark box shadows to portray 3D lighting.
                         </p>
                         <p>
@@ -65,9 +65,8 @@ const ClosetCastDocs = () => {
                         </p>
                         <h6 className='subtitle-blue'>The Code</h6>
                         <p>
-                            ClosetCast is a simple but effective and lightweight app made in vanilla HTML, CSS, and JavaScript on the front end, using EJS as a templating language.
-                            The backend is a simple setup with NodeJS and Express, making calls to a RESTful weather API. It's hosted on Heroku using their free tier, with continuous development
-                            and integration setup through integration with Git/Github.
+                            ClosetCast is a lightweight app made in vanilla HTML, CSS, and JavaScript on the front end, using EJS as a templating language.
+                            The backend is a simple setup with NodeJS and Express, making calls to a RESTful weather API. It's hosted on Heroku using their free tier, with CD/CI setup through Heroku's intergration with Git/Github.
                         </p>
                         <p>
                             I had to add an extra layer of logic to programmatically suggest clothing options, since the API is only providing weather information to the backend. When the data is
