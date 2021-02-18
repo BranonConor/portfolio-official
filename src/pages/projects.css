@@ -2,6 +2,18 @@
     padding: 0;
 }
 
+.ProjectsPage .inline-link {
+    padding: 0;
+    color: var(--primary-accent);
+    height: 100%;
+    width: auto;
+    text-align: left;
+    display: inline;
+    align-items: initial;
+    justify-content: initial;
+    font-size: 1em;
+}
+
 
 @media only screen and (max-width: 600px) {
     .ProjectsPage h4 {

@@ -30,7 +30,8 @@ const ProjectGrid = () => {
                 'Covid19API',
                 'NPM',
                 'EJS',
-                'Heroku'
+                'Heroku',
+                'Git/Github',
             ],
             demoLink: 'http://dash-4-coronavirus.herokuapp.com/',
             codeLink: 'https://github.com/BranonConor/corona-dash',
@@ -50,7 +51,8 @@ const ProjectGrid = () => {
                 'React',
                 'NodeJS',
                 'NPM',
-                'Netlify'
+                'Netlify',
+                'Git/Github',
             ],
             demoLink: 'https://charter-official-prototype.netlify.app/',
             codeLink: null,
@@ -71,7 +73,8 @@ const ProjectGrid = () => {
                 'NodeJS',
                 'NPM',
                 'Figma',
-                'Netlify'
+                'Netlify',
+                'Git/Github',
             ],
             demoLink: 'https://unifydesign.netlify.app/',
             codeLink: null,
@@ -82,8 +85,8 @@ const ProjectGrid = () => {
         },
         {
             name: 'YelpCamp',
-            role: 'Fullstack Engineering Student',
-            description: 'I built a full-stack CRUD app with authentication, user profiles, comments, reviews, etc. for campsites as a course project.',
+            role: 'Fullstack Bootcamp Project',
+            description: 'I built a full-stack CRUD app with authentication, user profiles, comments, reviews, etc. for campsites as a bootcamp project.',
             technologies: [
                 'HTML',
                 'CSS',
@@ -95,10 +98,13 @@ const ProjectGrid = () => {
                 'Mongoose',
                 'EJS',
                 'PassportJS',
-                'Heroku'
+                'Heroku',
+                'Git/Github',
+                'Cloudinary API',
+                'Mapbox API'
             ],
-            demoLink: null,
-            codeLink: null,
+            demoLink: 'http://branon-yelp-camp.herokuapp.com/',
+            codeLink: 'https://github.com/BranonConor/yelpcamp',
             animation: 'spring',
             animationTime: 0.5,
             docs: <YelpCampDocs />,
@@ -116,7 +122,8 @@ const ProjectGrid = () => {
                 'ExpressJS',
                 'WeatherAPI',
                 'EJS',
-                'NPM'
+                'NPM',
+                'Git/Github',
             ],
             demoLink: 'https://closetcast.herokuapp.com',
             codeLink: 'https://github.com/BranonConor/weather-app',
@@ -151,7 +158,8 @@ const ProjectGrid = () => {
                 'JS',
                 'HexoJS',
                 'Wordpress',
-                'Kinsta'
+                'Kinsta',
+                'Git/Github',
             ],
             demoLink: 'https://theramind-sb.com/',
             codeLink: null,
