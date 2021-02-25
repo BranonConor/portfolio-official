@@ -95,8 +95,7 @@ const CharterWebsiteDocs = () => {
                         <img src={home} alt="Home page"/>
                         <img src={services} alt="Services page"/>
                         <img src={map} alt="Map page"/>
-                        <ButtonPrimaryExternal link='http://closetcast.herokuapp.com/' content='See live project ✨' />
-                        <ButtonPrimaryExternal link='https://github.com/BranonConor/weather-app' content='See the repo 🛠' />
+                        <ButtonPrimaryExternal link='https://charterhcg.com' content='See live project ✨' />
                     </div>
                 </motion.div>
             </div>
