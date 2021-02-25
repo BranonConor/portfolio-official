@@ -91,7 +91,7 @@ const AboutPage = () => {
               animate={{x: 0, opacity: 1}}
               transition={{type: 'spring', duration: 1.3}}
             >
-              But wait - there's more!
+              I do more than just code.
             </motion.h4>
             <motion.p
                 initial={{x: -75, opacity: 0}}
@@ -111,7 +111,7 @@ const AboutPage = () => {
                 animate={{x: 0, opacity: 1}}
                 transition={{type: 'spring', duration: 1.5}}
               >
-                Producing Hip Hop / Trap Beats
+                Hip Hop / Trap Beat Production
               </motion.h6>
                 <motion.p
                   initial={{x: -75, opacity: 0}}
@@ -119,7 +119,7 @@ const AboutPage = () => {
                   transition={{type: 'spring', duration: 1.6}}
                 >
                   I've been producing hip hop beats since I was in high school - over a decade! I recently released a beat tape album on Spotify
-                  under my producer name, @PancitPapi (a hearken to my Filipino heritage). Here are a few of my personal favorites:
+                  under my producer name, @PancitPapi (a hearken to my Filipino heritage). Check out a few of my personal favorites:
                 </motion.p>
               </div>
             </div>
@@ -132,6 +132,8 @@ const AboutPage = () => {
             <SpotifyCard trackId='7swPZzrJuA7qNd8BhIiooz'/>
             <SpotifyCard trackId='2eKVyWO7qQXRiAlaS2xJKx'/>
           </div>
+
+          
         </div>
       </section>
     </Layout>
