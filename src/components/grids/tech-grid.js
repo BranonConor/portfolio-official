@@ -97,7 +97,14 @@ const TechGrid = () => {
         },
     ]
     return (
-        <div className="TechGrid">
+        <motion.div className="TechGrid"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ 
+                type: 'spring',
+                duration: 2
+            }}
+        >
             <div className="content">
                 <h5 className='subtitle-blue'>My tools and tech</h5>
             </div>
@@ -122,7 +129,7 @@ const TechGrid = () => {
                     )
                  })}
             </div>
-        </div>
+        </motion.div>
     )
 }
 

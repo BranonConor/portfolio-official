@@ -4,6 +4,7 @@ import './index.css'
 import React, {useEffect} from "react"
 
 import AOS from "aos";
+import AchievementGrid from '../components/grids/achievement-grid'
 import ButtonPrimary from '../components/buttons/button-primary'
 import Layout from "../components/layout"
 import Resume from '../images/resume.pdf'
@@ -68,6 +69,7 @@ const IndexPage = () => {
           </div>
         </div>
         <TechGrid />
+        <AchievementGrid />
       </section>
     </Layout>
   )
