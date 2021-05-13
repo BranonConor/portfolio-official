@@ -1,5 +1,5 @@
 .AchievementGrid {
-    margin: 64px 0;
+    margin: 64px 0 0 0;
     padding: 16px;
     box-sizing: border-box;
     background: var(--primary-gradient);

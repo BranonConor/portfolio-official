@@ -7,7 +7,16 @@ import AOS from "aos";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SpotifyCard from "../components/hobbies/spotify-card";
+import bug from '../images/photography/bug.jpeg'
+import harbor from '../images/photography/harbor.jpeg'
+import jellybowl from '../images/photography/jellybowl.jpeg'
+import mammoth from '../images/photography/mammoth.jpeg'
+import matt from '../images/photography/matt.jpeg'
 import {motion} from 'framer-motion'
+import pismo from '../images/photography/pismo.jpeg'
+import rach from '../images/photography/rach.jpeg'
+import sd from '../images/photography/sd.jpeg'
+import tahoe from '../images/photography/tahoe.jpeg'
 
 const AboutPage = () => {
   useEffect(() => {
@@ -50,33 +59,17 @@ const AboutPage = () => {
                 animate={{x: 0, opacity: 1}}
                 transition={{type: 'spring', duration: 0.9}}
               >
-                As my fascination with technology got the better of me throughout this time, I began to experiment with coding and building websites. I was hooked immediately.
+                As my fascination with technology got the better of me throughout this time, I began to experiment with coding and building websites. I was hooked immediately and since then I've been devoting time each day to learning more and more about software development and design. 
               </motion.p>
               <motion.p
                 initial={{x: -75, opacity: 0}}
                 animate={{x: 0, opacity: 1}}
                 transition={{type: 'spring', duration: 1}}
               >
-                Over the past few years I've been hunkered down learning everything I can about software development. User experience and front end engineering immediately caught my eye as a point of entry, as I rediscovered my neuroscience 
-                passion in striving to understand the user and how they may interact with my applications.
+                User experience and front end engineering currently satisfy my neuroscience passion in striving to understand the user and how they may interact with my applications. It also helps feed my appetite for creative work in creating beautiful and intuitive interfaces, and in
+                building/maintaining design systems and component libraries. I'm always diving deeper into new technologies (on the front and back end) as well as more computer science fundamentals, and I strive every day to 
+                be the best engineer and designer I can be. 
               </motion.p>
-            </div>
-            <div className="right">
-              <motion.p
-                initial={{x: -75, opacity: 0}}
-                animate={{x: 0, opacity: 1}}
-                transition={{type: 'spring', duration: 1.0}}               
-              >
-                I haven't stopped at front end - I like to devote time every week to studying fullstack development, data structures, algorithms, and building projects as well. I love waking up every day with a 
-                drive to master my current skills and a yearning to learn something new. 
-              </motion.p>
-              <motion.h6 className='subtitle-blue' 
-                initial={{x: -75, opacity: 0}}
-                animate={{x: 0, opacity: 1}}
-                transition={{type: 'spring', duration: 1.2}}
-              >
-                Cheers to building tech that improves the human experience.
-              </motion.h6>
             </div>
           </div>
         </div>
@@ -102,39 +95,10 @@ const AboutPage = () => {
               </motion.p>
           </div>
           
-
           <div className="content">
-              <div className="left">
+              <div className="title">
                 <div className="card">
-                  <motion.h6
-                    initial={{x: -75, opacity: 0}}
-                    animate={{x: 0, opacity: 1}}
-                    transition={{type: 'spring', duration: 1.5}}
-                  >
-                    Hip Hop / Trap Beat Production
-                  </motion.h6>
-                  <motion.p
-                    initial={{x: -75, opacity: 0}}
-                    animate={{x: 0, opacity: 1}}
-                    transition={{type: 'spring', duration: 1.6}}
-                  >
-                    I've been producing hip hop beats since I was in high school - over a decade! I recently released a beat tape album on Spotify
-                    under my producer name, @PancitPapi (a hearken to my Filipino heritage). Check out a few of my personal favorites:
-                  </motion.p>
-                </div>
-              </div>
-          </div>
-          <div className="music-wrapper">
-            <SpotifyCard trackId='4rXEe25PBDQCaair3QYNmT'/>
-            <SpotifyCard trackId='7swPZzrJuA7qNd8BhIiooz'/>
-            <SpotifyCard trackId='2eKVyWO7qQXRiAlaS2xJKx'/>
-          </div>
-
-
-          <div className="content">
-              <div className="left">
-                <div className="card">
-                  <motion.h6
+                  <motion.h6 className='subtitle-blue'
                     initial={{x: -75, opacity: 0}}
                     animate={{x: 0, opacity: 1}}
                     transition={{type: 'spring', duration: 1.5}}
@@ -146,17 +110,43 @@ const AboutPage = () => {
                     animate={{x: 0, opacity: 1}}
                     transition={{type: 'spring', duration: 1.6}}
                   >
-                    I've been producing hip hop beats since I was in high school - over a decade! I recently released a beat tape album on Spotify
-                    under my producer name, @PancitPapi (a hearken to my Filipino heritage). Check out a few of my personal favorites:
+                    I've been doing photography for almost a decade, winning many awards and honors as well as scoring contracts with large companies for collaborations and shoots. Photography has been one of my favorite ways to flex my creative muscles ever since I picked it up!
                   </motion.p>
                 </div>
               </div>
           </div>
-          <div className="music-wrapper">
-            <SpotifyCard trackId='7swPZzrJuA7qNd8BhIiooz'/>
-            <SpotifyCard trackId='2eKVyWO7qQXRiAlaS2xJKx'/>
+          <div className="photo-container">
+            <img src={bug} alt="Art piece"/>
+            <img src={harbor} alt="Art piece"/>
+            <img src={matt} alt="Art piece"/>
+            <img src={sd} alt="Art piece"/>
+            <img src={jellybowl} alt="Art piece"/>
+            <img src={mammoth} alt="Art piece"/>
+            <img src={pismo} alt="Art piece"/>
+            <img src={rach} alt="Art piece"/>
+            <img src={tahoe} alt="Art piece"/>
           </div>
 
+          <div className="title">
+            <div className="card">
+              <motion.h6 className='subtitle-blue'
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{type: 'spring', duration: 1.5}}
+              >
+                Hip Hop / Trap Beat Production
+              </motion.h6>
+              <motion.p
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{type: 'spring', duration: 1.6}}
+              >
+                I've been producing hip hop beats since I was in high school - over a decade! I recently released a beat tape album on Spotify
+                under my producer name, @PancitPapi (a hearken to my Filipino heritage). Check it out!
+              </motion.p>
+            </div>
+            <SpotifyCard trackId='2Sd57YRcNyJDEEH4tyfBRb'/>
+          </div>
           
         </div>
       </section>

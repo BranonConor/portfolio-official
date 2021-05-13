@@ -80,7 +80,7 @@ const AchievementGrid = () => {
                 'Github'
             ],
             demoLink: '',
-            codeLink: 'https://github.com/BranonConor/list-rocket',
+            codeLink: 'https://github.com/LucasBassetti/react-simple-chatbot/pull/293',
             id: 2
         },
     ])
