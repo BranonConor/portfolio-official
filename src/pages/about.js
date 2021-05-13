@@ -104,31 +104,55 @@ const AboutPage = () => {
           
 
           <div className="content">
-            <div className="left">
-              <div className="card">
-              <motion.h6 className='subtitle-blue' 
-                initial={{x: -75, opacity: 0}}
-                animate={{x: 0, opacity: 1}}
-                transition={{type: 'spring', duration: 1.5}}
-              >
-                Hip Hop / Trap Beat Production
-              </motion.h6>
-                <motion.p
-                  initial={{x: -75, opacity: 0}}
-                  animate={{x: 0, opacity: 1}}
-                  transition={{type: 'spring', duration: 1.6}}
-                >
-                  I've been producing hip hop beats since I was in high school - over a decade! I recently released a beat tape album on Spotify
-                  under my producer name, @PancitPapi (a hearken to my Filipino heritage). Check out a few of my personal favorites:
-                </motion.p>
+              <div className="left">
+                <div className="card">
+                  <motion.h6
+                    initial={{x: -75, opacity: 0}}
+                    animate={{x: 0, opacity: 1}}
+                    transition={{type: 'spring', duration: 1.5}}
+                  >
+                    Hip Hop / Trap Beat Production
+                  </motion.h6>
+                  <motion.p
+                    initial={{x: -75, opacity: 0}}
+                    animate={{x: 0, opacity: 1}}
+                    transition={{type: 'spring', duration: 1.6}}
+                  >
+                    I've been producing hip hop beats since I was in high school - over a decade! I recently released a beat tape album on Spotify
+                    under my producer name, @PancitPapi (a hearken to my Filipino heritage). Check out a few of my personal favorites:
+                  </motion.p>
+                </div>
               </div>
-            </div>
-            <div className="right">
-              <iframe className='follow-widget' src="https://open.spotify.com/follow/1/?uri=spotify:artist:3JD3vssfV4KCBW4FJQlaBZ&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style={{border:'none', overflow:'hidden'}} allowTransparency="true"></iframe>
-            </div>
           </div>
           <div className="music-wrapper">
             <SpotifyCard trackId='4rXEe25PBDQCaair3QYNmT'/>
+            <SpotifyCard trackId='7swPZzrJuA7qNd8BhIiooz'/>
+            <SpotifyCard trackId='2eKVyWO7qQXRiAlaS2xJKx'/>
+          </div>
+
+
+          <div className="content">
+              <div className="left">
+                <div className="card">
+                  <motion.h6
+                    initial={{x: -75, opacity: 0}}
+                    animate={{x: 0, opacity: 1}}
+                    transition={{type: 'spring', duration: 1.5}}
+                  >
+                    Photography & Digital Art
+                  </motion.h6>
+                  <motion.p
+                    initial={{x: -75, opacity: 0}}
+                    animate={{x: 0, opacity: 1}}
+                    transition={{type: 'spring', duration: 1.6}}
+                  >
+                    I've been producing hip hop beats since I was in high school - over a decade! I recently released a beat tape album on Spotify
+                    under my producer name, @PancitPapi (a hearken to my Filipino heritage). Check out a few of my personal favorites:
+                  </motion.p>
+                </div>
+              </div>
+          </div>
+          <div className="music-wrapper">
             <SpotifyCard trackId='7swPZzrJuA7qNd8BhIiooz'/>
             <SpotifyCard trackId='2eKVyWO7qQXRiAlaS2xJKx'/>
           </div>
