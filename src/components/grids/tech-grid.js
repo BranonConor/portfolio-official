@@ -51,83 +51,83 @@ const TechGrid = () => {
         },
         {
             svg: <img src={ts} className='icon' />,
-            animationTime: 1.1
-        },
-        {
-            svg: <ReactIcon />,
             animationTime: 0.4
         },
         {
-            svg: <GatsbyIcon />,
+            svg: <ReactIcon />,
             animationTime: 0.5
+        },
+        {
+            svg: <GatsbyIcon />,
+            animationTime: 0.6
         },
         {
             svg: <img src={next} className='icon' />,
-            animationTime: 0.5
-        },
-        {
-            svg: <BootstrapIcon />,
             animationTime: 0.7
         },
         {
-            svg: <img src={sass} className='icon' />,
+            svg: <BootstrapIcon />,
             animationTime: 0.8
+        },
+        {
+            svg: <img src={sass} className='icon' />,
+            animationTime: 0.9
         },
         {
             svg: <img src={styledComponents} className='icon' />,
-            animationTime: 0.8
+            animationTime: 1
         },
         {
             svg: <img src={graphQl} className='icon' />,
-            animationTime: 0.9
-        },
-        {
-            svg: <FigmaIcon />,
-            animationTime: 1.6
-        },
-        {
-            svg: <img src={aws} className='icon' />,
-            animationTime: 1
-        },
-        {
-            svg: <NodeIcon />,
-            animationTime: 0.8
-        },
-        {
-            svg: <ExpressIcon />,
-            animationTime: 0.9
-        },
-        {
-            svg: <MongoIcon />,
-            animationTime: 1
-        },
-        {
-            svg: <img src={postgres} className='icon' />,
-            animationTime: 1
-        },
-        {
-            svg: <img src={docker} className='icon' />,
-            animationTime: 1
-        },
-        {
-            svg: <GitIcon />,
             animationTime: 1.1
         },
         {
-            svg: <GithubIcon />,
+            svg: <FigmaIcon />,
             animationTime: 1.2
         },
         {
-            svg: <NPMIcon />,
-            animationTime: 1.5
-        },
-        {
-            svg: <NetlifyIcon />,
+            svg: <img src={aws} className='icon' />,
             animationTime: 1.3
         },
         {
-            svg: <HerokuIcon />,
+            svg: <NodeIcon />,
             animationTime: 1.4
+        },
+        {
+            svg: <ExpressIcon />,
+            animationTime: 1.5
+        },
+        {
+            svg: <MongoIcon />,
+            animationTime: 1.6
+        },
+        {
+            svg: <img src={postgres} className='icon' />,
+            animationTime: 1.7
+        },
+        {
+            svg: <img src={docker} className='icon' />,
+            animationTime: 1.8
+        },
+        {
+            svg: <GitIcon />,
+            animationTime: 1.9
+        },
+        {
+            svg: <GithubIcon />,
+            animationTime: 2
+        },
+        {
+            svg: <NPMIcon />,
+            animationTime: 2.1
+        },
+        {
+            svg: <NetlifyIcon />,
+            animationTime: 2.2
+        },
+        {
+            svg: <HerokuIcon />,
+            animationTime: 2.3
         },
     ]
     return (
