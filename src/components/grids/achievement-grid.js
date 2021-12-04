@@ -63,7 +63,7 @@ const AchievementGrid = () => {
         {
             name: 'Just joined Color as the 2nd-ever Design Technologist! 🤝',
             role: 'Design Technologist',
-            description: "I recently joined Color (or Color Genomics) as their second ever Design Technologist. I'm so excited to a founding team member for Color's design system!",
+            description: "I recently joined Color (or Color Genomics) as their second ever Design Technologist. I'm so excited to be a founding team member for Color's design system!",
             technologies: [
                 'UX Design',
                 'Design Systems',
