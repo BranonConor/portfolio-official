@@ -17,71 +17,62 @@ const AchievementGrid = () => {
 
     const [projects, setProjects] = useState([
         {
-            name: 'Published New NPM Package! 🎉',
-            role: 'UX Designer and Engineer',
-            description: "UNIFY Design System's custom icon set is now available as an NPM package of SVG-based React components!",
+            name: ' Setup a POC Translation/i18n flow 🎉',
+            role: 'UX Engineer',
+            description: "From start to finish, I recently setup a prototypical translations flow that can provide i18n to a suite of web and mobile apps from a single source of truth (distributed as an npm module)!",
             technologies: [
                 'ReactJS',
-                'Webpack',
-                'Babel',
-                'Rollup',
-                'SVG',
+                'react-i18next',
+                'Lokalise',
                 'NPM',
                 'NodeJS',
-                'SemVer'
+                'Figma'
             ],
-            demoLink: 'https://www.npmjs.com/package/unify-design-icons',
-            codeLink: 'https://github.com/charterbran/unify-design-icons',
+            demoLink: '',
+            codeLink: '',
             id: 1
         },
         {
-            name: 'Started development of ListRocket 🛠',
-            role: 'UX Designer & Full Stack Engineer',
-            description: "I recently started building a new full stack web application with a decoupled architecture in hopes of providing a better solution to group event planning and organziation!",
+            name: 'Started working on a Typescript Course 🛠',
+            role: 'Software Developer Consultant',
+            description: "I recently teamed up with the legend himself, Colt Steele, to bring a highly anticipated Typescript course to life! We're currently building the course together and will release on Udemy early Q1 2022.",
             technologies: [
-                'HTML',
-                'CSS',
+                'Typescript',
                 'JS',
-                'Sass',
+                'Data Structures',
+                'Udemy',
                 'ReactJS',
-                'NextJS',
-                'NodeJS',
-                'NPM',
-                'ExpressJS',
-                'MongoDB',
             ],
-            demoLink: '',
-            codeLink: 'https://github.com/BranonConor/list-rocket',
+            demoLink: 'https://www.udemy.com/user/coltsteele/',
+            codeLink: '',
             id: 2
         },
         {
-            name: 'Neuroscience study is in review! 🧠',
+            name: "I'm now the coauthor of a 2nd neuroscience publication! 🧠",
             role: 'Neuroscience researcher',
-            description: "A neuropsychiatric research study that I oversaw a couple years back is in review for scientific publications/journals! If it passes it will be my second neuroscientific research publication as a coauthor - so exciting!",
+            description: "A neuropsychiatric research study that I oversaw a couple years back was recently published in the Psychiatry Research journal!",
             technologies: [
                 'Neuroscience',
                 'TMS Therapy',
                 'Biomarkers'
             ],
-            demoLink: '',
-            codeLink: 'https://github.com/BranonConor/list-rocket',
-            id: 2
+            demoLink: 'https://www.sciencedirect.com/science/article/abs/pii/S0165178121003504',
+            codeLink: '',
+            id: 3
         },
         {
-            name: 'Sent off a PR for an open source contribution! 🤝',
-            role: 'Front End Engineer',
-            description: "I recently submitted a PR to the react-simple-chatbot NPM package, which makes this awesome React-based chatbot widget more accessible with a 10+ point increase in Lighthouse accessibility scores.",
+            name: 'Just joined Color as the 2nd-ever Design Technologist! 🤝',
+            role: 'Design Technologist',
+            description: "I recently joined Color (or Color Genomics) as their second ever Design Technologist. I'm so excited to a founding team member for Color's design system!",
             technologies: [
                 'UX Design',
+                'Design Systems',
                 'Accessibility',
                 'ReactJS',
-                'NPM',
-                'Git',
-                'Github'
             ],
-            demoLink: '',
-            codeLink: 'https://github.com/LucasBassetti/react-simple-chatbot/pull/293',
-            id: 2
+            demoLink: 'https://www.color.com/',
+            codeLink: '',
+            id: 4
         },
     ])
 

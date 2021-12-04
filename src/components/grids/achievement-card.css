@@ -63,10 +63,16 @@
     position: relative;
     top: 0;
 }
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1080px) {
+    .AchievementCard {
+        width: calc(50% - 16px);
+        max-width: 360px;
+    }
+}
+@media only screen and (max-width: 900px) {
     .AchievementCard {
         width: 100%;
         margin: 16px 0;
+        max-width: 1000px;
     }
 }

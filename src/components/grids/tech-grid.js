@@ -14,14 +14,20 @@ import GitIcon from '../icons/git'
 import GithubIcon from '../icons/github-logo'
 import HTMLIcon from '../icons/html'
 import HerokuIcon from '../icons/heroku'
-import HexoIcon from '../icons/hexo'
 import JSIcon from '../icons/js'
-import JqueryIcon from '../icons/jquery'
 import MongoIcon from '../icons/mongo'
 import NPMIcon from '../icons/npm'
 import NetlifyIcon from '../icons/netlify'
 import NodeIcon from '../icons/node'
 import ReactIcon from '../icons/react'
+import styledComponents from '../../images/styled-components.svg'
+import graphQl from '../../images/graphql.svg'
+import aws from '../../images/aws.svg'
+import ts from '../../images/ts.svg'
+import sass from '../../images/sass.svg'
+import next from '../../images/next.svg'
+import postgres from '../../images/postgres.svg'
+import docker from '../../images/docker.svg'
 import { motion } from 'framer-motion'
 
 const TechGrid = () => {
@@ -44,56 +50,84 @@ const TechGrid = () => {
             animationTime: 0.3
         },
         {
-            svg: <ReactIcon />,
+            svg: <img src={ts} className='icon' />,
             animationTime: 0.4
         },
         {
-            svg: <GatsbyIcon />,
+            svg: <ReactIcon />,
             animationTime: 0.5
         },
         {
-            svg: <HexoIcon />,
+            svg: <GatsbyIcon />,
             animationTime: 0.6
         },
         {
-            svg: <BootstrapIcon />,
+            svg: <img src={next} className='icon' />,
             animationTime: 0.7
         },
         {
-            svg: <NodeIcon />,
+            svg: <BootstrapIcon />,
             animationTime: 0.8
         },
         {
-            svg: <ExpressIcon />,
+            svg: <img src={sass} className='icon' />,
             animationTime: 0.9
         },
         {
-            svg: <MongoIcon />,
+            svg: <img src={styledComponents} className='icon' />,
             animationTime: 1
         },
         {
-            svg: <GitIcon />,
+            svg: <img src={graphQl} className='icon' />,
             animationTime: 1.1
         },
         {
-            svg: <GithubIcon />,
+            svg: <FigmaIcon />,
             animationTime: 1.2
         },
         {
-            svg: <NetlifyIcon />,
+            svg: <img src={aws} className='icon' />,
             animationTime: 1.3
         },
         {
-            svg: <HerokuIcon />,
+            svg: <NodeIcon />,
             animationTime: 1.4
         },
         {
-            svg: <NPMIcon />,
+            svg: <ExpressIcon />,
             animationTime: 1.5
         },
         {
-            svg: <FigmaIcon />,
+            svg: <MongoIcon />,
             animationTime: 1.6
+        },
+        {
+            svg: <img src={postgres} className='icon' />,
+            animationTime: 1.7
+        },
+        {
+            svg: <img src={docker} className='icon' />,
+            animationTime: 1.8
+        },
+        {
+            svg: <GitIcon />,
+            animationTime: 1.9
+        },
+        {
+            svg: <GithubIcon />,
+            animationTime: 2
+        },
+        {
+            svg: <NPMIcon />,
+            animationTime: 2.1
+        },
+        {
+            svg: <NetlifyIcon />,
+            animationTime: 2.2
+        },
+        {
+            svg: <HerokuIcon />,
+            animationTime: 2.3
         },
     ]
     return (
