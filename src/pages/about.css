@@ -15,10 +15,17 @@
 .AboutPage .content .full-width {
     width: 100%;
 }
+.AboutPage .photo-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 .AboutPage .photo-container img {
     border-radius: 10px;
     box-shadow: var(--nav-shadow);
-    width: 500px;
+    width: 30%;
     margin: 0 16px 16px 0;
 }
 
