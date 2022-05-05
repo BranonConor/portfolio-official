@@ -37,15 +37,20 @@ module.exports = {
               variants: ["300", "400", "500", "600", "700"],
               //subsets: ['latin']
               //text: 'Hello'
-              fontDisplay: 'swap',
+              fontDisplay: "swap",
               //strategy: 'selfHosted' // 'base64' || 'cdn'
             },
-          ]
-        }
-      }
+            {
+              family: "Montserrat",
+              variants: ["300", "400"],
+              fontDisplay: "swap",
+            },
+          ],
+        },
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

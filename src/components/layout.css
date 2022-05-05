@@ -1,13 +1,13 @@
 /* -------------- GLOBAL STYLES ---------------- */
 :root {
-  --primary-accent: #FF0096;
-  --secondary-accent: #0080C7;
+  --primary-accent: #ff0096;
+  --secondary-accent: #0080c7;
   --blue-text: #189ee6;
   --dark-bg: #111111;
-  --purple-bg: #22031F;
+  --purple-bg: #22031f;
   --grey-bg: #222222;
-  --primary-gradient: linear-gradient(124.41deg, #0072B1 0%, #FD36AB 95.2%);
-  --standard-shadow: 0px 0px 15px rgba(0, 0, 0, 0.10);
+  --primary-gradient: linear-gradient(124.41deg, #0072b1 0%, #fd36ab 95.2%);
+  --standard-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   --nav-shadow: 0px 4px 15px 0px rgba(196, 130, 235, 0.3);
   --hover-shadow: 0px 4px 15px 0px rgba(226, 175, 255, 0.6);
 }
@@ -16,21 +16,24 @@ html {
   height: initial;
   margin: 0;
   padding: 0;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Comfortaa", sans-serif;
   overflow-x: hidden;
   background: var(--grey-bg);
-  overscroll-behavior: none; 
+  overscroll-behavior: none;
 }
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 17px;
   color: white;
 }
-h1, h2, h4, h5, h6 {
-  font-family: 'Comfortaa', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Comfortaa", sans-serif;
   text-align: left;
 }
 h1 {
@@ -50,7 +53,6 @@ h2 {
   color: white;
 }
 h3 {
-  font-family: 'Nunito', sans-serif;
   font-weight: 600;
   color: white;
   font-size: 2.75em;
@@ -90,8 +92,10 @@ p {
   margin: 0 0;
   font-weight: 400px;
   letter-spacing: 0.5px;
+  font-family: "Montserrat", sans-serif;
 }
 ul {
+  font-family: "Montserrat", sans-serif;
   padding-left: 20px;
   margin: 4px 0;
 }
@@ -119,7 +123,7 @@ hr {
   border-radius: 50px;
 }
 .detail-title {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 0.9em;
   font-weight: bold;
   width: auto;
@@ -129,12 +133,12 @@ hr {
   margin: 0px 0px 8px 0;
 }
 .detail-text {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 0.8em;
   color: var(--detail-grey);
 }
 .subtitle {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-weight: bold;
   width: auto;
   color: var(--primary-accent);
@@ -143,7 +147,7 @@ hr {
   margin: 8px 0px 4px 0;
 }
 .subtitle-blue {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-weight: bold;
   width: auto;
   color: var(--blue-text);
@@ -152,7 +156,7 @@ hr {
   margin: 8px 0px 4px 0;
 }
 .subtitle-white {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-weight: bold;
   width: auto;
   color: white;
@@ -180,7 +184,7 @@ hr {
 }
 
 /* ----- LINK HOVERS ---- */
-a{
+a {
   width: 100%;
   height: 60px;
   padding: 4px;
@@ -190,12 +194,12 @@ a{
   justify-content: center;
   transition: 0.2s ease all;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 a .icon {
   transition: 0.1s ease all;
 }
-a:hover .icon{
+a:hover .icon {
   animation: bounce 0.25s linear 1;
   animation-fill-mode: forwards;
 }
@@ -215,25 +219,23 @@ a.disabled-link:hover .icon {
   animation-fill-mode: forwards;
 }
 
-
 @keyframes bounce {
   0% {
-      height: 24px;
+    height: 24px;
   }
   25% {
-      height: 40px;
+    height: 40px;
   }
   50% {
-      height: 30px;
+    height: 30px;
   }
   75% {
-      height: 38px;
+    height: 38px;
   }
   100% {
-      height: 35px;
+    height: 35px;
   }
 }
-
 
 /* --- COLUMN WITH TEXT IN BOTH COLUMNS --- */
 .two-column {
@@ -283,15 +285,16 @@ a.disabled-link:hover .icon {
 }
 
 @media only screen and (max-width: 1000px) {
-    /* --- COLUMN WITH TEXT IN BOTH --- */
-    .two-column {
-      flex-direction: column;
-      width: 100%;
-    }
-    .two-column .left, .two-column .right {
-      width: 100%;
-      padding: 0;
-    }
+  /* --- COLUMN WITH TEXT IN BOTH --- */
+  .two-column {
+    flex-direction: column;
+    width: 100%;
+  }
+  .two-column .left,
+  .two-column .right {
+    width: 100%;
+    padding: 0;
+  }
 }
 @media only screen and (max-width: 600px) {
   body {
@@ -328,7 +331,8 @@ a.disabled-link:hover .icon {
     flex-direction: column;
     width: 100%;
   }
-  .two-column .content .left, .two-column .content .right {
+  .two-column .content .left,
+  .two-column .content .right {
     padding: 8px 0;
     width: 100%;
   }
