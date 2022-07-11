@@ -7,6 +7,7 @@ import AOS from "aos";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { motion } from "framer-motion";
+import BlogGrid from "../components/grids/blog-grid";
 
 const BlogPage = () => {
   useEffect(() => {
@@ -35,6 +36,7 @@ const BlogPage = () => {
             >
               Blog coming soon! 👀
             </motion.h4>
+            <BlogGrid />
           </div>
         </div>
       </section>
