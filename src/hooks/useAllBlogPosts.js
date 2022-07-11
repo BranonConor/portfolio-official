@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 export const useAllBlogPosts = () => {
   const data = useStaticQuery(graphql`
     query BlogPosts {
-      allContentfulBlogPost {
+      allContentfulBlogPost(limit: 10) {
         edges {
           node {
             id
