@@ -19,6 +19,9 @@ const BlogGrid = () => {
               duration: Number(`0.${5 + index * 2}`),
             }}
           >
+            <StyledImageWrapper>
+              <StyledImage src={post.heroImage.publicUrl} />
+            </StyledImageWrapper>
             <StyledCardTitle>{post.title}</StyledCardTitle>
             <p>{post.description.description}</p>
           </StyledCardWrapper>
@@ -33,13 +36,16 @@ export default BlogGrid;
 const StyledContainer = styled.div`
   width: 100%;
   padding: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const StyledCardWrapper = styled(motion.div)`
-  width: 100%;
+  width: 350px;
+  min-height: 400px;
   background: #111111;
   padding: 16px;
-  margin: 16px 0;
+  margin: 16px 32px 16px 0;
   border-radius: 10px;
 
   &:hover {
@@ -49,6 +55,10 @@ const StyledCardWrapper = styled(motion.div)`
     h5 {
       color: white;
       border-left: 2px solid white;
+    }
+
+    img {
+      transform: scale(1.05);
     }
   }
 `;
@@ -61,4 +71,15 @@ const StyledCardTitle = styled.h5`
   border-left: 2px solid #189ee6;
   padding: 0px 0px 0px 16px;
   margin: 8px 0px 4px 0;
+`;
+const StyledImageWrapper = styled.div`
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 0 0 16px 0;
+  overflow: hidden;
+`;
+const StyledImage = styled.img`
+  width: 100%;
+  transition: 0.4s ease all;
 `;

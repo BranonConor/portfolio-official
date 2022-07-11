@@ -13,6 +13,9 @@ export const useAllBlogPosts = () => {
               description
             }
             publishDate(formatString: "MMMM YYYY")
+            heroImage {
+              publicUrl
+            }
           }
         }
       }
