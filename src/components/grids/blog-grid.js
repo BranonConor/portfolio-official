@@ -42,7 +42,7 @@ const StyledContainer = styled.div`
 
 const StyledCardWrapper = styled(motion.div)`
   width: 350px;
-  min-height: 400px;
+  min-height: 300px;
   background: #111111;
   padding: 16px;
   margin: 16px 32px 16px 0;
@@ -60,6 +60,11 @@ const StyledCardWrapper = styled(motion.div)`
     img {
       transform: scale(1.05);
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin: 16px 0;
   }
 `;
 
