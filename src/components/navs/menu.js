@@ -36,7 +36,7 @@ const Menu = () => (
       }}
     >
       <ProjectsIcon />
-    </Link>{" "}
+    </Link>
     <Link
       to="/blog"
       activeStyle={{

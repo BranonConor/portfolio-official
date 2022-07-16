@@ -7,7 +7,7 @@ import AOS from "aos";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { motion } from "framer-motion";
-import BlogGrid from "../components/grids/blog-grid";
+import BlogGrid from "../components/blog/BlogGrid";
 
 const BlogPage = () => {
   useEffect(() => {
