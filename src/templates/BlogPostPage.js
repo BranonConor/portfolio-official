@@ -13,16 +13,8 @@ import ButtonPrimary from '../components/buttons/button-primary';
 
 const BlogPostPage = ({ data }) => {
 	const post = data.contentfulBlogPost;
-	const {
-		author,
-		category,
-		createdAt,
-		body,
-		description,
-		heroImage,
-		tags,
-		title,
-	} = post;
+	const { category, createdAt, body, description, heroImage, tags, title } =
+		post;
 
 	const options = {
 		renderMark: {
@@ -86,7 +78,6 @@ const BlogPostPage = ({ data }) => {
 						<BlogTitle component='h1'>{title}</BlogTitle>
 						<p>{description.description}</p>
 						<BlogPostDetails
-							author={author}
 							category={category}
 							tags={tags}
 							createdAt={createdAt}
@@ -107,9 +98,6 @@ export default BlogPostPage;
 export const query = graphql`
 	query ($slug: String!) {
 		contentfulBlogPost(slug: { eq: $slug }) {
-			author {
-				name
-			}
 			body {
 				raw
 				references {

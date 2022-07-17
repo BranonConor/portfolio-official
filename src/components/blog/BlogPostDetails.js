@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import ChipButton from '../buttons/ChipButton';
 
 const BlogPostDetails = (props) => {
-	const { author, category, createdAt, tags } = props;
+	const { category, createdAt, tags } = props;
 
 	return (
 		<StyledDetailsWrapper>
 			<StyledP>
-				By:{' '}
+				Published:
 				<ChipButton
 					animation='spring'
 					animationTime={0.1}
-					content={`${author.name}, ${createdAt}`}
+					content={createdAt}
 					isTertiary
 				/>
 			</StyledP>
