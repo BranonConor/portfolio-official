@@ -200,6 +200,10 @@ const StyledBlogImage = styled(GatsbyImage)`
 
 const StyledBlogPageWrapper = styled.div`
 	max-width: 1100px;
+
+	@media only screen and (max-width: 900px) {
+		width: 100%;
+	}
 `;
 const StyledBlogHeader = styled.div`
 	display: flex;
