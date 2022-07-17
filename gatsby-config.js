@@ -59,7 +59,7 @@ module.exports = {
 				spaceId: `av58d69vs7p1`,
 				// Learn about environment variables: https://gatsby.dev/env-vars
 				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-				donwloadLocal: true,
+				downloadLocal: true,
 			},
 		},
 		`gatsby-plugin-image`,
