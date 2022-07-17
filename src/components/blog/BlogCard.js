@@ -31,7 +31,6 @@ export default BlogCard;
 
 const StyledCardWrapper = styled(motion.div)`
   width: 350px;
-  min-height: 300px;
   background: #111111;
   padding: 16px;
   margin: 16px 32px 16px 0;
@@ -58,12 +57,16 @@ const StyledCardWrapper = styled(motion.div)`
   @media only screen and (max-width: 768px) {
     width: 100%;
     margin: 16px 0;
+
+    p {
+      display: none;
+    }
   }
 `;
 const StyledContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
 `;
 
 const StyledCardTitle = styled.h5`
@@ -77,10 +80,14 @@ const StyledCardTitle = styled.h5`
 `;
 const StyledImageWrapper = styled.div`
   width: 100%;
-  height: 50%;
+  height: 200px;
   border-radius: 10px;
   margin: 0 0 16px 0;
   overflow: hidden;
+  
+  @media only screen and (max-width: 768px) {
+    height: 75%;
+  }
 `;
 const StyledImage = styled.img`
   width: 100%;

@@ -34,6 +34,10 @@ const StyledH1 = styled.h1(
   font-size: 53px;
   font-weight: 500;
   letter-spacing: -1px;
+
+  @media only screen and (max-width: 601px) {
+    font-size: 33px;
+  }
 `
 );
 const StyledH2 = styled.h2(
@@ -42,6 +46,10 @@ const StyledH2 = styled.h2(
   font-size: 38px;
   font-weight: 500;
   letter-spacing: -0.5px;
+
+  @media only screen and (max-width: 601px) {
+    font-size: 28px;
+  }
 `
 );
 const StyledH3 = styled.h3(
@@ -50,6 +58,10 @@ const StyledH3 = styled.h3(
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0px;
+
+  @media only screen and (max-width: 601px) {
+    font-size: 24px;
+  }
 `
 );
 const StyledH4 = styled.h4(
@@ -58,6 +70,10 @@ const StyledH4 = styled.h4(
   font-size: 26px;
   font-weight: 600;
   letter-spacing: 0.25px;
+
+  @media only screen and (max-width: 601px) {
+    font-size: 22px;
+  }
 `
 );
 const StyledH5 = styled.h5(
@@ -66,6 +82,10 @@ const StyledH5 = styled.h5(
   font-size: 23px;
   font-weight: 600;
   letter-spacing: 0px;
+
+  @media only screen and (max-width: 601px) {
+    font-size: 20px;
+  }
 `
 );
 const StyledH6 = styled.h6(
@@ -74,5 +94,9 @@ const StyledH6 = styled.h6(
   font-size: 19px;
   font-weight: 700;
   letter-spacing: 0.15px;
+
+  @media only screen and (max-width: 601px) {
+    font-size: 18px;
+  }
 `
 );

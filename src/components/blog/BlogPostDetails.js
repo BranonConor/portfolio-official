@@ -8,7 +8,13 @@ const BlogPostDetails = (props) => {
   return (
     <StyledDetailsWrapper>
       <StyledP>
-        {author.name}, {createdAt}
+        By: {' '}
+        <ChipButton
+          animation="spring"
+          animationTime={0.1}
+          content={`${author.name}, ${createdAt}`}
+          isTertiary
+        />
       </StyledP>
       <StyledP>
         Category:
@@ -19,8 +25,9 @@ const BlogPostDetails = (props) => {
           isTertiary
         />
       </StyledP>
-      <StyledTagWrapper>
+      <StyledP>
         Tags:
+        <StyledTagWrapper>
         {tags.map((tag, index) => (
           <ChipButton
             animation="spring"
@@ -29,7 +36,8 @@ const BlogPostDetails = (props) => {
             isTertiary
           />
         ))}
-      </StyledTagWrapper>
+        </StyledTagWrapper>
+      </StyledP>
     </StyledDetailsWrapper>
   );
 };
@@ -59,6 +67,7 @@ const StyledP = styled.p`
   width: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 const StyledTagWrapper = styled.div`
