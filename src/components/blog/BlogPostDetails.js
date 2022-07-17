@@ -4,19 +4,30 @@ import ChipButton from "../buttons/ChipButton";
 
 const BlogPostDetails = (props) => {
   const { author, category, createdAt, tags } = props;
-  console.log(tags);
+
   return (
     <StyledDetailsWrapper>
       <StyledP>
         {author.name}, {createdAt}
       </StyledP>
       <StyledP>
-        Category: <ChipButton content={category} />
+        Category:
+        <ChipButton
+          animation="spring"
+          animationTime={0.1}
+          content={category}
+          isTertiary
+        />
       </StyledP>
       <StyledTagWrapper>
         Tags:
-        {tags.map((tag) => (
-          <ChipButton content={tag} isSecondary />
+        {tags.map((tag, index) => (
+          <ChipButton
+            animation="spring"
+            animationTime={Number(`0.${0 + index}`)}
+            content={tag}
+            isTertiary
+          />
         ))}
       </StyledTagWrapper>
     </StyledDetailsWrapper>
@@ -33,7 +44,7 @@ const StyledDetailsWrapper = styled.div`
   justify-content: space-between;
   margin: 16px 0;
   padding: 16px 32px;
-  background: #111111;
+  background: linear-gradient(124.41deg, #0072b1 0%, #fd36ab 95.2%);
   border-radius: 10px;
   box-shadow: 0px 4px 15px 0px rgba(196, 130, 235, 0.3);
 
@@ -52,6 +63,7 @@ const StyledP = styled.p`
 
 const StyledTagWrapper = styled.div`
   width: auto;
+  max-width: 400px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

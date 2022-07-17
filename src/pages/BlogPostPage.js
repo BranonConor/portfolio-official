@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import BlogPostDetails from "../components/blog/BlogPostDetails";
+import BlogTitle from "../components/blog/BlogTitle";
 
 const BlogPostPage = ({ data }) => {
   const post = data.contentfulBlogPost;
@@ -34,7 +35,19 @@ const BlogPostPage = ({ data }) => {
         );
       },
       [BLOCKS.HEADING_2]: (node, children) => {
-        return <h2>{children}</h2>;
+        return <BlogTitle component="h2">{children}</BlogTitle>;
+      },
+      [BLOCKS.HEADING_3]: (node, children) => {
+        return <BlogTitle component="h3">{children}</BlogTitle>;
+      },
+      [BLOCKS.HEADING_4]: (node, children) => {
+        return <BlogTitle component="h4">{children}</BlogTitle>;
+      },
+      [BLOCKS.HEADING_5]: (node, children) => {
+        return <BlogTitle component="h5">{children}</BlogTitle>;
+      },
+      [BLOCKS.HEADING_6]: (node, children) => {
+        return <BlogTitle component="h6">{children}</BlogTitle>;
       },
     },
   };
@@ -48,8 +61,8 @@ const BlogPostPage = ({ data }) => {
             <StyledImage src={heroImage.publicUrl} />
           </StyledImageWrapper>
           <StyledBlogHeader>
-            <h1>{title}</h1>
-            <h5>{description.description}</h5>
+            <BlogTitle component="h1">{title}</BlogTitle>
+            <BlogTitle component="h5">{description.description}</BlogTitle>
             <BlogPostDetails
               author={author}
               category={category}
@@ -57,7 +70,7 @@ const BlogPostPage = ({ data }) => {
               createdAt={createdAt}
             />
           </StyledBlogHeader>
-          {/* <div>{renderRichText(body.body, options)}</div> */}
+          <div>{renderRichText(body, options)}</div>
         </StyledBlogPageWrapper>
       </section>
     </Layout>
@@ -73,7 +86,7 @@ export const query = graphql`
         name
       }
       body {
-        body
+        raw
       }
       category
       createdAt(formatString: "MMMM YYYY")

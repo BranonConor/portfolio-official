@@ -34,7 +34,7 @@ const BlogPage = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ type: "spring", duration: 0.8 }}
             >
-              Blog coming soon! 👀
+              Writings, rantings, reflections, and more. 😇
             </motion.h4>
             <BlogGrid />
           </div>
