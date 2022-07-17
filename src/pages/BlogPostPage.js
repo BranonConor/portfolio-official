@@ -74,7 +74,7 @@ const BlogPostPage = ({ data }) => {
 	return (
 		<Layout>
 			<SEO title={title} />
-			<section className='page'>
+			<StyledSection>
 				<StyledBlogPageWrapper>
 					<StyledImageWrapper
 						initial={{ opacity: 0 }}
@@ -97,7 +97,7 @@ const BlogPostPage = ({ data }) => {
 					</StyledArticle>
 					<ButtonPrimary content='👈 Back to Blog' link='/blog' />
 				</StyledBlogPageWrapper>
-			</section>
+			</StyledSection>
 		</Layout>
 	);
 };
@@ -131,6 +131,21 @@ export const query = graphql`
 			tags
 			title
 		}
+	}
+`;
+
+const StyledSection = styled.div`
+	width: 100%;
+	padding: 64px 15%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+
+	@media only screen and (max-width: 1400px) {
+		padding: 64px 64px 64px 128px;
+	}
+	@media only screen and (max-width: 600px) {
+		padding: 98px 16px;
 	}
 `;
 
