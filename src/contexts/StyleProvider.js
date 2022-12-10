@@ -59,7 +59,7 @@ export const theme = {
 };
 
 const GlobalStyle = createGlobalStyle(
-	({ theme: { colors, typography } }) => `
+	({ theme: { colors } }) => `
 	html {
 		box-sizing: border-box;
 		background: ${colors.white};

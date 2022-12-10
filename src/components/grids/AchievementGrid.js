@@ -1,11 +1,10 @@
 import './project-card.css';
 import 'aos/dist/aos.css';
-import './achievement-grid.css';
 
 import React, { useEffect, useState } from 'react';
 
 import AOS from 'aos';
-import AchievementCard from './achievement-card';
+import AchievementCard from './AchievementCard';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -94,9 +93,7 @@ const AchievementGrid = () => {
 				type: 'spring',
 				duration: 2,
 			}}>
-			<StyledTitle className='subtitle-blue'>
-				Recent Achievements
-			</StyledTitle>
+			<StyledTitle>Recent Achievements</StyledTitle>
 			<StyledAchievementsWrapper>
 				{projects.map((project) => {
 					return (
@@ -125,19 +122,24 @@ const StyledWrapper = styled(motion.div)`
 	padding: 16px;
 	box-sizing: border-box;
 	border-radius: 10px;
+	background: linear-gradient(124.41deg, #0072b1 0%, #fd36ab 95.2%);
 `;
 const StyledTitle = styled.h5`
 	color: white;
 `;
-const StyledAchievementsWrapper = styled.div(
-	({ theme: { colors } }) => `
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 16px 0 0 0;
-  background: ${colors.primaryGradient};
-  
-  @media only screen and (max-width: ) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-`
-);
+const StyledAchievementsWrapper = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 16px;
+	margin: 16px 0 0 0;
+
+	@media only screen and (max-width: 1500px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@media only screen and (max-width: 1200px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media only screen and (max-width: 850px) {
+		grid-template-columns: 1fr;
+	}
+`;

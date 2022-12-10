@@ -32,8 +32,8 @@ const StyledContainer = styled.div`
 	padding: 16px 0;
 	box-sizing: border-box;
 	display: grid;
-	grid-gap: 24px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 24px;
 
 	@media only screen and (max-width: 1600px) {
 		grid-template-columns: 1fr 1fr 1fr;
