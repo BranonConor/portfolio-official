@@ -30,6 +30,18 @@ export default BlogGrid;
 const StyledContainer = styled.div`
 	width: 100%;
 	padding: 16px 0;
-	display: flex;
-	flex-wrap: wrap;
+	box-sizing: border-box;
+	display: grid;
+	grid-gap: 24px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	@media only screen and (max-width: 1600px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@media only screen and (max-width: 1300px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media only screen and (max-width: 900px) {
+		grid-template-columns: 1fr;
+	}
 `;
