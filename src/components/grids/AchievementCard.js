@@ -1,5 +1,3 @@
-import './achievement-card.css';
-
 import CodeIcon from '../icons/code';
 import LinkIcon from '../icons/link';
 import React from 'react';
