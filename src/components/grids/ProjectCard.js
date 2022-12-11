@@ -1,12 +1,10 @@
-import './project-card.css';
-
 import CodeIcon from '../icons/code';
 import LinkIcon from '../icons/link';
 import React from 'react';
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const ProjectCard = (props) => {
+export const ProjectCard = (props) => {
 	const {
 		name,
 		role,
@@ -20,7 +18,6 @@ const ProjectCard = (props) => {
 
 	return (
 		<StyledWrapper
-			className='ProjectCard'
 			initial={{ rotate: 330, scale: 0, opacity: 0 }}
 			animate={{
 				rotate: 360,
@@ -34,21 +31,20 @@ const ProjectCard = (props) => {
 			drag
 			dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
 			whileDrag={{ scale: 0.75 }}>
-			<div className='card-content'>
-				<h6>{name}</h6>
-				<p className='detail-title'>{role}</p>
-				<p className='detail-text'>{description}</p>
-				<>
-					{technologies.map((tech) => {
-						return (
-							<li className='detail-text' key={`${name}-${tech}`}>
-								{tech}
-							</li>
-						);
-					})}
-				</>
-			</div>
-			<div className='links'>
+			<h6>{name}</h6>
+			<p className='detail-title'>{role}</p>
+			<p className='detail-text'>{description}</p>
+			<StyledList>
+				{technologies.map((tech) => {
+					return (
+						<StyledListItem key={`${name}-${tech}`}>
+							{tech}
+						</StyledListItem>
+					);
+				})}
+			</StyledList>
+
+			<StyledLinksWrapper>
 				<a
 					href={demoLink}
 					target='_blank'
@@ -63,25 +59,25 @@ const ProjectCard = (props) => {
 					className={codeLink ? '' : 'disabled-link'}>
 					<CodeIcon />
 				</a>
-			</div>
+			</StyledLinksWrapper>
 		</StyledWrapper>
 	);
 };
 
-export default ProjectCard;
-
-const StyledWrapper = styled.div`
+const StyledWrapper = styled(motion.div)`
 	border-radius: 10px;
 	z-index: 2;
 	position: relative;
-	transition: 0.15s;
 	background: #111111;
 	padding: 16px 16px 66px 16px;
 	box-sizing: border-box;
+	box-shadow: 0px 4px 15px 0px rgba(196, 130, 235, 0.3);
+	height: 100%;
+	width: 100%;
 
 	&:hover {
-		box-shadow: none;
 		background: rgba(10, 10, 10, 0.4);
+		cursor: grab;
 	}
 	&:hover .links {
 		background: var(--dark-bg);
