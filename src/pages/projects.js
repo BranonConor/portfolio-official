@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 
 import AOS from 'aos';
 import Layout from '../components/layout';
-import ProjectGrid from '../components/grids/project-grid';
+import ProjectGrid from '../components/grids/ProjectGrid';
 import SEO from '../components/seo';
 import { motion } from 'framer-motion';
 

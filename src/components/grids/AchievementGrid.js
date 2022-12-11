@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import React, { useEffect, useState } from 'react';
 
 import AOS from 'aos';
-import AchievementCard from './AchievementCard';
+import { ProjectCard } from './ProjectCard';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -30,7 +30,9 @@ const AchievementGrid = () => {
 			],
 			demoLink: '',
 			codeLink: '',
-			id: 1,
+			animation: 'spring',
+			animationTime: 0.3,
+			id: 2,
 		},
 		{
 			name: 'Finishing up a Typescript Course 🛠',
@@ -46,6 +48,8 @@ const AchievementGrid = () => {
 			],
 			demoLink: 'https://www.udemy.com/user/coltsteele/',
 			codeLink: '',
+			animation: 'spring',
+			animationTime: 0.4,
 			id: 2,
 		},
 		{
@@ -64,6 +68,8 @@ const AchievementGrid = () => {
 			demoLink:
 				'https://www.youtube.com/watch?v=MdwRX0MwtFE&ab_channel=FriendsofFigma%2CSanDiego',
 			codeLink: '',
+			animation: 'spring',
+			animationTime: 0.5,
 			id: 3,
 		},
 		{
@@ -81,6 +87,8 @@ const AchievementGrid = () => {
 			],
 			demoLink: 'https://list-rocket.vercel.app',
 			codeLink: 'https://github.com/BranonConor/list-rocket2',
+			animation: 'spring',
+			animationTime: 0.6,
 			id: 4,
 		},
 	]);
@@ -97,7 +105,7 @@ const AchievementGrid = () => {
 			<StyledAchievementsWrapper>
 				{projects.map((project) => {
 					return (
-						<AchievementCard
+						<ProjectCard
 							name={project.name}
 							role={project.role}
 							description={project.description}

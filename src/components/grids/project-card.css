@@ -1,58 +1,52 @@
 .ProjectCard {
-    background: var(--dark-bg);
-    width: 320px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: var(--nav-shadow);
-    margin: 16px 16px 16px 0;
 }
 .ProjectCard .card-content {
-    box-sizing: border-box;
-    padding: 16px;
-    height: auto;
+	box-sizing: border-box;
+	padding: 16px;
+	height: auto;
 }
 .ProjectCard .card-content:hover {
-    cursor: grab;
+	cursor: grab;
 }
 .ProjectCard .technologies {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 0;
-    height: auto;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 0;
+	height: auto;
 }
 .ProjectCard .technologies li {
-    width: auto;
-    padding: 4px 8px;
-    background: var(--secondary-accent);
-    border-radius: 10px;
-    margin: 4px;
-    transition: 0.1s ease all;
+	width: auto;
+	padding: 4px 8px;
+	background: var(--secondary-accent);
+	border-radius: 10px;
+	margin: 4px;
+	transition: 0.1s ease all;
 }
 .ProjectCard .technologies li:hover {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 .ProjectCard .links {
-    box-sizing: border-box;
-    width: 100%;
-    background: var(--grey-bg);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    height: 50px;
+	box-sizing: border-box;
+	width: 100%;
+	background: var(--grey-bg);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+	height: 50px;
 }
 .ProjectCard .links a {
-    box-sizing: border-box;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	box-sizing: border-box;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .ProjectCard .links .icon {
-    position: relative;
-    top: 0;
+	position: relative;
+	top: 0;
 }
