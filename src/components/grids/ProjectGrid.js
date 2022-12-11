@@ -241,29 +241,27 @@ const ProjectGrid = () => {
 						)}
 					</StyledActiveProjectWrapper>
 				</Droppable>
-				<StyledWrapper>
-					{isDropped && activeDocs
-						? showActiveDocs(activeId)
-						: projects.map((project) => {
-								return (
-									<Draggable id={project.id}>
-										<ProjectCard
-											name={project.name}
-											role={project.role}
-											description={project.description}
-											technologies={project.technologies}
-											demoLink={project.demoLink}
-											codeLink={project.codeLink}
-											animationType={project.animation}
-											animationTime={
-												project.animationTime
-											}
-											key={project.id}
-										/>
-									</Draggable>
-								);
-						  })}
-				</StyledWrapper>
+				{isDropped && activeDocs ? (
+					showActiveDocs(activeId)
+				) : (
+					<StyledWrapper>
+						{projects.map((project) => (
+							<Draggable id={project.id}>
+								<ProjectCard
+									name={project.name}
+									role={project.role}
+									description={project.description}
+									technologies={project.technologies}
+									demoLink={project.demoLink}
+									codeLink={project.codeLink}
+									animationType={project.animation}
+									animationTime={project.animationTime}
+									key={project.id}
+								/>
+							</Draggable>
+						))}
+					</StyledWrapper>
+				)}
 			</div>
 		</DndContext>
 	);
