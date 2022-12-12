@@ -272,11 +272,16 @@ export default ProjectGrid;
 
 const StyledWrapper = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 16px;
-	padding: 16px 0;
+	padding: 16px;
 	width: 100%;
+	border-radius: 10px;
+	background: linear-gradient(124.41deg, #0072b1 0%, #fd36ab 95.2%);
 
+	@media only screen and (max-width: 1550px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 	@media only screen and (max-width: 1150px) {
 		grid-template-columns: 1fr 1fr;
 	}

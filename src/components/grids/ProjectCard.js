@@ -15,6 +15,7 @@ export const ProjectCard = (props) => {
 		animationType,
 		animationTime,
 		isDraggable,
+		isDisabled,
 	} = props;
 
 	return (
@@ -47,22 +48,25 @@ export const ProjectCard = (props) => {
 
 			<StyledLinksWrapper>
 				<StyledLink
+					isDisabled={demoLink === ''}
 					href={demoLink}
 					target='_blank'
 					rel='noreferrer noopenner'>
 					<LinkIcon />
 				</StyledLink>
-				<a href={codeLink} target='_blank' rel='noreferrer noopenner'>
+				<StyledLink
+					isDisabled={codeLink === ''}
+					href={codeLink}
+					target='_blank'
+					rel='noreferrer noopenner'>
 					<CodeIcon />
-				</a>
+				</StyledLink>
 			</StyledLinksWrapper>
 		</StyledWrapper>
 	);
 };
 
-const StyledWrapper = styled(motion.div)(
-	({ isDraggable }) =>
-		`
+const StyledWrapper = styled(motion.div)`
 	border-radius: 10px;
 	z-index: 2;
 	position: relative;
@@ -75,13 +79,14 @@ const StyledWrapper = styled(motion.div)(
 
 	&:hover {
 		background: rgba(10, 10, 10, 0.4);
-		cursor: ${isDraggable ? 'grab' : 'initial'};
+		cursor: ${({ drag }) => (drag ? 'grab' : 'initial')};
+
+		.links {
+			background: var(--dark-bg);
+		}
 	}
-	&:hover .links {
-		background: var(--dark-bg);
-	}
-`
-);
+`;
+
 const StyledList = styled.ul`
 	list-style: none;
 	display: flex;
@@ -94,6 +99,7 @@ const StyledListItem = styled.li`
 	width: auto;
 	padding: 4px 8px;
 	background: var(--secondary-accent);
+	font-size: 14px;
 	border-radius: 10px;
 	margin: 4px;
 	transition: 0.1s ease all;
@@ -125,4 +131,9 @@ const StyledLinksWrapper = styled.div`
 		justify-content: center;
 	}
 `;
-const StyledLink = styled.a``;
+const StyledLink = styled.a(
+	({ isDisabled }) => `
+	cursor: ${isDisabled ? 'not-allowed' : ''};
+	opacity: ${isDisabled ? '0.25' : '1'};
+`
+);
