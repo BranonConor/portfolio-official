@@ -14,6 +14,7 @@ export const ProjectCard = (props) => {
 		codeLink,
 		animationType,
 		animationTime,
+		isDraggable,
 	} = props;
 
 	return (
@@ -28,12 +29,12 @@ export const ProjectCard = (props) => {
 				type: animationType,
 				duration: animationTime,
 			}}
-			drag
+			drag={isDraggable}
 			dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
 			whileDrag={{ scale: 0.75 }}>
 			<h6>{name}</h6>
 			<p className='detail-title'>{role}</p>
-			<p className='detail-text'>{description}</p>
+			<StyledDescription>{description}</StyledDescription>
 			<StyledList>
 				{technologies.map((tech) => {
 					return (
@@ -45,20 +46,20 @@ export const ProjectCard = (props) => {
 			</StyledList>
 
 			<StyledLinksWrapper>
-				<a
+				<StyledLink
+					isDisabled={demoLink === ''}
 					href={demoLink}
 					target='_blank'
-					rel='noreferrer noopenner'
-					className={demoLink ? '' : 'disabled-link'}>
+					rel='noreferrer noopenner'>
 					<LinkIcon />
-				</a>
-				<a
+				</StyledLink>
+				<StyledLink
+					isDisabled={codeLink === ''}
 					href={codeLink}
 					target='_blank'
-					rel='noreferrer noopenner'
-					className={codeLink ? '' : 'disabled-link'}>
+					rel='noreferrer noopenner'>
 					<CodeIcon />
-				</a>
+				</StyledLink>
 			</StyledLinksWrapper>
 		</StyledWrapper>
 	);
@@ -77,11 +78,17 @@ const StyledWrapper = styled(motion.div)`
 
 	&:hover {
 		background: rgba(10, 10, 10, 0.4);
-		cursor: grab;
+		cursor: ${({ drag }) => (drag ? 'grab' : 'initial')};
+
+		.links {
+			background: var(--dark-bg);
+		}
 	}
-	&:hover .links {
-		background: var(--dark-bg);
-	}
+`;
+const StyledDescription = styled.p`
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 0.8em;
+	color: var(--detail-grey);
 `;
 const StyledList = styled.ul`
 	list-style: none;
@@ -90,11 +97,16 @@ const StyledList = styled.ul`
 	width: 100%;
 	padding: 0;
 	height: auto;
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 `;
 const StyledListItem = styled.li`
 	width: auto;
 	padding: 4px 8px;
 	background: var(--secondary-accent);
+	font-size: 14px;
 	border-radius: 10px;
 	margin: 4px;
 	transition: 0.1s ease all;
@@ -126,3 +138,9 @@ const StyledLinksWrapper = styled.div`
 		justify-content: center;
 	}
 `;
+const StyledLink = styled.a(
+	({ isDisabled }) => `
+	cursor: ${isDisabled ? 'not-allowed' : ''};
+	opacity: ${isDisabled ? '0.25' : '1'};
+`
+);

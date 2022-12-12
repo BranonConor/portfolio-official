@@ -8,6 +8,7 @@ export const DocsLayout = (props) => {
 
 const StyledWrapper = styled.div`
 	width: 100%;
+	max-width: 1000px;
 	margin: 64px 0 32px 0;
 
 	.title {
