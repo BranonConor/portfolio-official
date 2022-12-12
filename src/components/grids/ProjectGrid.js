@@ -310,8 +310,6 @@ const StyledActiveProjectWrapper = styled.div`
 	max-width: 800px;
 	min-height: 200px;
 	border-radius: 10px;
-	padding: 16px;
-	text-align: center;
 	margin: 16px 0;
 	display: flex;
 	justify-content: center;
@@ -319,4 +317,9 @@ const StyledActiveProjectWrapper = styled.div`
 	border: 2px dotted grey;
 	box-sizing: border-box;
 	position: relative;
+
+	p:first-child {
+		text-align: center;
+		padding: 16px;
+	}
 `;

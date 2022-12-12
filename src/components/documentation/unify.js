@@ -153,10 +153,7 @@ const UnifyDocs = () => {
 export default UnifyDocs;
 
 const StyledImage = styled.img`
+	width: 100%;
 	border-radius: 10px;
 	margin: 16px 0;
-
-	@media only screen and (max-width: 768px) {
-		width: 100%;
-	}
 `;
