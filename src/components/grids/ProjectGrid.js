@@ -257,6 +257,7 @@ const ProjectGrid = () => {
 									animationType={project.animation}
 									animationTime={project.animationTime}
 									key={project.id}
+									isDraggable={true}
 								/>
 							</Draggable>
 						))}

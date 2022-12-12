@@ -14,6 +14,7 @@ export const ProjectCard = (props) => {
 		codeLink,
 		animationType,
 		animationTime,
+		isDraggable,
 	} = props;
 
 	return (
@@ -28,7 +29,7 @@ export const ProjectCard = (props) => {
 				type: animationType,
 				duration: animationTime,
 			}}
-			drag
+			drag={isDraggable}
 			dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
 			whileDrag={{ scale: 0.75 }}>
 			<h6>{name}</h6>
@@ -45,18 +46,13 @@ export const ProjectCard = (props) => {
 			</StyledList>
 
 			<StyledLinksWrapper>
-				<a
+				<StyledLink
 					href={demoLink}
 					target='_blank'
-					rel='noreferrer noopenner'
-					className={demoLink ? '' : 'disabled-link'}>
+					rel='noreferrer noopenner'>
 					<LinkIcon />
-				</a>
-				<a
-					href={codeLink}
-					target='_blank'
-					rel='noreferrer noopenner'
-					className={codeLink ? '' : 'disabled-link'}>
+				</StyledLink>
+				<a href={codeLink} target='_blank' rel='noreferrer noopenner'>
 					<CodeIcon />
 				</a>
 			</StyledLinksWrapper>
@@ -64,7 +60,9 @@ export const ProjectCard = (props) => {
 	);
 };
 
-const StyledWrapper = styled(motion.div)`
+const StyledWrapper = styled(motion.div)(
+	({ isDraggable }) =>
+		`
 	border-radius: 10px;
 	z-index: 2;
 	position: relative;
@@ -77,12 +75,13 @@ const StyledWrapper = styled(motion.div)`
 
 	&:hover {
 		background: rgba(10, 10, 10, 0.4);
-		cursor: grab;
+		cursor: ${isDraggable ? 'grab' : 'initial'};
 	}
 	&:hover .links {
 		background: var(--dark-bg);
 	}
-`;
+`
+);
 const StyledList = styled.ul`
 	list-style: none;
 	display: flex;
@@ -126,3 +125,4 @@ const StyledLinksWrapper = styled.div`
 		justify-content: center;
 	}
 `;
+const StyledLink = styled.a``;
