@@ -310,6 +310,8 @@ const StyledActiveProjectWrapper = styled.div`
 	max-width: 800px;
 	min-height: 200px;
 	border-radius: 10px;
+	padding: 16px;
+	text-align: center;
 	margin: 16px 0;
 	display: flex;
 	justify-content: center;

@@ -15,7 +15,6 @@ export const ProjectCard = (props) => {
 		animationType,
 		animationTime,
 		isDraggable,
-		isDisabled,
 	} = props;
 
 	return (
@@ -35,7 +34,7 @@ export const ProjectCard = (props) => {
 			whileDrag={{ scale: 0.75 }}>
 			<h6>{name}</h6>
 			<p className='detail-title'>{role}</p>
-			<p className='detail-text'>{description}</p>
+			<StyledDescription>{description}</StyledDescription>
 			<StyledList>
 				{technologies.map((tech) => {
 					return (
@@ -86,7 +85,11 @@ const StyledWrapper = styled(motion.div)`
 		}
 	}
 `;
-
+const StyledDescription = styled.p`
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 0.8em;
+	color: var(--detail-grey);
+`;
 const StyledList = styled.ul`
 	list-style: none;
 	display: flex;
@@ -94,6 +97,10 @@ const StyledList = styled.ul`
 	width: 100%;
 	padding: 0;
 	height: auto;
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 `;
 const StyledListItem = styled.li`
 	width: auto;
