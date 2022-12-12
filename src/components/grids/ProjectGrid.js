@@ -275,6 +275,7 @@ const StyledWrapper = styled.div`
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 16px;
 	padding: 16px;
+	box-sizing: border-box;
 	width: 100%;
 	border-radius: 10px;
 	background: linear-gradient(124.41deg, #0072b1 0%, #fd36ab 95.2%);
