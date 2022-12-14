@@ -1,5 +1,4 @@
 import 'aos/dist/aos.css';
-import './tech-grid.css';
 
 import React, { useEffect } from 'react';
 
@@ -171,7 +170,7 @@ const StyledWrapper = styled.div`
 	box-sizing: border-box;
 	background: var(--dark-bg);
 	border-radius: 10px;
-	box-shadow: vaR(--nav-shadow);
+	box-shadow: var(--nav-shadow);
 `;
 const StyledLogosWrapper = styled.div`
 	display: flex;

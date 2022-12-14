@@ -9,7 +9,7 @@ import ButtonPrimary from '../components/buttons/button-primary';
 import Layout from '../components/layout';
 import Resume from '../images/resume.pdf';
 import SEO from '../components/seo';
-import TechGrid from '../components/grids/tech-grid';
+import TechGrid from '../components/grids/TechGrid';
 import { motion } from 'framer-motion';
 
 const IndexPage = () => {
