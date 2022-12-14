@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import SpotifyCard from '../components/hobbies/spotify-card';
+import SpotifyCard from '../components/hobbies/SpotifyCard';
 import { motion } from 'framer-motion';
 import { PhotoGrid } from '../components/grids/PhotoGrid';
 

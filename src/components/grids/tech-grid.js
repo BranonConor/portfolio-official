@@ -28,6 +28,7 @@ import next from '../../images/next.svg';
 import postgres from '../../images/postgres.svg';
 import docker from '../../images/docker.svg';
 import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
 const TechGrid = () => {
 	useEffect(() => {
@@ -129,7 +130,7 @@ const TechGrid = () => {
 		},
 	];
 	return (
-		<motion.div
+		<StyledWrapper
 			className='TechGrid'
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
@@ -137,13 +138,11 @@ const TechGrid = () => {
 				type: 'spring',
 				duration: 2,
 			}}>
-			<div className='content'>
-				<h5 className='subtitle-blue'>My tools and tech</h5>
-			</div>
-			<div className='tech'>
+			<h5>My tools and tech</h5>
+			<StyledLogosWrapper>
 				{logos.map((logo) => {
 					return (
-						<motion.div
+						<StyledLogo
 							initial={{ rotate: 270, scale: 0, opacity: 0 }}
 							animate={{
 								rotate: 360,
@@ -156,12 +155,43 @@ const TechGrid = () => {
 							}}
 							key={logo.animationTime}>
 							{logo.svg}
-						</motion.div>
+						</StyledLogo>
 					);
 				})}
-			</div>
-		</motion.div>
+			</StyledLogosWrapper>
+		</StyledWrapper>
 	);
 };
 
 export default TechGrid;
+
+const StyledWrapper = styled.div`
+	margin: 64px 0 32px 0;
+	padding: 16px;
+	box-sizing: border-box;
+	background: var(--dark-bg);
+	border-radius: 10px;
+	box-shadow: vaR(--nav-shadow);
+`;
+const StyledLogosWrapper = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	margin: 16px 0 0 0;
+`;
+const StyledLogo = styled(motion.div)`
+	margin: 16px 32px 16px 0;
+
+	svg,
+	img {
+		width: 50px;
+		height: 50px;
+		background: rgba(250, 250, 250, 0.1);
+		border-radius: 10px;
+		padding: 8px;
+
+		@media only screen and (max-width: 768px) {
+			width: 32px;
+			height: 32px;
+		}
+	}
+`;
