@@ -133,7 +133,7 @@ const AboutPage = () => {
 					</div>
 					<PhotoGrid />
 
-					<div className='title'>
+					{/* <div className='title'>
 						<div className='card'>
 							<motion.h6
 								className='subtitle-blue'
@@ -154,7 +154,7 @@ const AboutPage = () => {
 							</motion.p>
 						</div>
 						<SpotifyCard trackId='2Sd57YRcNyJDEEH4tyfBRb' />
-					</div>
+					</div> */}
 				</div>
 			</section>
 		</Layout>
