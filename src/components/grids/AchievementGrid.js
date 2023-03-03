@@ -6,7 +6,7 @@ import AOS from 'aos';
 import { ProjectCard } from './ProjectCard';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { useAllProjects } from '../../hooks/useAllProjects';
+import { useAccomplishments } from '../../hooks/useAccomplishments';
 
 const AchievementGrid = () => {
 	useEffect(() => {
@@ -14,7 +14,7 @@ const AchievementGrid = () => {
 		AOS.refresh();
 	});
 
-	const achievements = useAllProjects();
+	const achievements = useAccomplishments();
 
 	return (
 		<StyledWrapper
@@ -24,7 +24,7 @@ const AchievementGrid = () => {
 				type: 'spring',
 				duration: 2,
 			}}>
-			<StyledTitle>Recent Achievements</StyledTitle>
+			<StyledTitle>What's New</StyledTitle>
 			<StyledAchievementsWrapper>
 				{achievements.map(({ node: achievement }, index) => {
 					return (
