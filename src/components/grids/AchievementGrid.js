@@ -24,7 +24,7 @@ const AchievementGrid = () => {
 				type: 'spring',
 				duration: 2,
 			}}>
-			<StyledTitle>What's New</StyledTitle>
+			<StyledTitle>What's new with me? Thanks for asking! 👇🏽</StyledTitle>
 			<StyledAchievementsWrapper>
 				{achievements.map(({ node: achievement }, index) => {
 					return (

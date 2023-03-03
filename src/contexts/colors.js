@@ -1,6 +1,5 @@
 export const colors = {
-	primaryGradient:
-		'linear-gradient(90deg, #EB5757 0%, #FF00A8 51.56%, #FF9900 94.79%)',
+	primaryGradient: 'linear-gradient(124.41deg,#0072b1 0%,#fd36ab 95.2%)',
 	horizon:
 		'linear-gradient(180deg, #071D3F 54.69%, #0071A2 86.98%, #0092D1 99.99%, #00B2FF 100%)',
 	deepSpace: '#071D3F',
