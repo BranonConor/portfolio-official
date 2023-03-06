@@ -17,7 +17,7 @@ const AboutPage = () => {
 	});
 
 	return (
-		<Layout>
+		<Layout isUnderConstruction>
 			<SEO title='About' />
 			<section className='page AboutPage'>
 				<div className='two-column'>

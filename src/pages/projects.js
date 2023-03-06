@@ -16,7 +16,7 @@ const ProjectsPage = () => {
 	});
 
 	return (
-		<Layout>
+		<Layout isUnderConstruction>
 			<SEO title='Projects' />
 			<section className='page ProjectsPage'>
 				<div className='two-column'>

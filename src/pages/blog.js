@@ -16,7 +16,7 @@ const BlogPage = () => {
 	});
 
 	return (
-		<Layout>
+		<Layout isUnderConstruction>
 			<SEO title='Blog' />
 			<section className='page BlogPage'>
 				<div className='two-column'>

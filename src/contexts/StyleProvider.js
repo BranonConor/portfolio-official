@@ -8,7 +8,7 @@ export const theme = {
 		black: colors.black,
 		white: colors.white,
 		bgLight: colors.rocketSteel,
-		primaryGradient: colors.horizon,
+		primaryGradient: colors.primaryGradient,
 		secondaryGradient: colors.atmosphere,
 		tertiaryGradient: colors.flame,
 		button: {
